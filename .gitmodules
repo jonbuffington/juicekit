@@ -1,0 +1,3 @@
+[submodule "flare"]
+	path = flare
+	url = git@github.com:jonbuffington/flare_juicekit.git

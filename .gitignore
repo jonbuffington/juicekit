@@ -1,0 +1,7 @@
+*~
+*.swf
+.DS_Store
+.settings/
+bin-debug/
+bin-release/
+target/

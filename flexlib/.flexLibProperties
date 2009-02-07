@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="org.juicekit.events.AutoTextFieldEvent"/>
+<classEntry path="org.juicekit.events.DataMouseEvent"/>
+<classEntry path="org.juicekit.events.InactivityEvent"/>
+<classEntry path="org.juicekit.events.InactivityMonitor"/>
+<classEntry path="org.juicekit.flare.vis.data.TreeMLReader"/>
+<classEntry path="org.juicekit.flare.vis.label.ILabelFormatter"/>
+<classEntry path="org.juicekit.flare.vis.label.LabelFormat"/>
+<classEntry path="org.juicekit.flare.vis.label.LabelFormatter"/>
+<classEntry path="org.juicekit.flare.vis.label.Labels"/>
+<classEntry path="org.juicekit.util.collection.AlphanumSort"/>
+<classEntry path="org.juicekit.util.helper.Browser"/>
+<classEntry path="org.juicekit.util.helper.CSSUtil"/>
+<classEntry path="org.juicekit.util.helper.Clipboard"/>
+<classEntry path="org.juicekit.util.helper.Formatter"/>
+<classEntry path="org.juicekit.util.helper.GraphicsUtil"/>
+<classEntry path="org.juicekit.util.helper.StringUtil"/>
+<classEntry path="org.juicekit.visual.controls.AutoTextField"/>
+<classEntry path="org.juicekit.visual.controls.DMAMapControl"/>
+<classEntry path="org.juicekit.visual.controls.FlareControlBase"/>
+<classEntry path="org.juicekit.visual.controls.MovieClipControlBase"/>
+<classEntry path="org.juicekit.visual.controls.TreeMapControl"/>
+<classEntry path="org.juicekit.visual.controls.USMapControl"/>
+<classEntry path="org.juicekit.visual.renderers.FilledRectValueRenderer"/>
+<classEntry path="org.juicekit.visual.renderers.HBarRenderer"/>
+<classEntry path="org.juicekit.visual.renderers.HLabeledGradient3"/>
+<classEntry path="org.juicekit.visual.renderers.HPercentRenderer"/>
+<classEntry path="org.juicekit.visual.renderers.IndexCircleRenderer"/>
+<classEntry path="org.juicekit.visual.renderers.MaxDataGridColumn"/>
+<classEntry path="org.juicekit.visual.renderers.NumberRendererBase"/>
+<classEntry path="org.juicekit.visual.renderers.RendererBase"/>
+<classEntry path="org.juicekit.visual.renderers.TripleValueRenderer"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

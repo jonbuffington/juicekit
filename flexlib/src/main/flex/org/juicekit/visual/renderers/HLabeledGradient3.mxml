@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * -*- Mode: MXML -*-
+  * *************************************************************************
+  *
+  * Copyright 2007-2009 Juice, Inc.
+  * 
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  * 
+  *     http://www.apache.org/licenses/LICENSE-2.0
+  * 
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  *
+  * *************************************************************************
+  -->
+
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+  initialize="init()">
+  <mx:Script>
+    <![CDATA[
+      import mx.events.ResizeEvent;
+
+
+      private var gradient:Shape;
+
+      private var leftColor:uint = 0xFF0000;
+      private var middleColor:uint = 0;
+      private var rightColor:uint = 0x00FF00;
+
+
+      /**
+       * Stores reference to the left-side label's text.
+       */
+      [Bindable]
+      public var leftText:String;
+
+      /**
+       * Stores reference to the right-side label's text.
+       */
+      [Bindable]
+      public var rightText:String;
+
+
+      /**
+       * Stores the label width.
+       */
+      private var _labelWidth:Number = 50;
+
+      /**
+       * Contains the width used for each of the labels.
+       */
+      [Bindable]
+      public function set labelWidth(value:Number):void {
+        _labelWidth = value;
+        drawGradient(leftColor, middleColor, rightColor);
+      }
+
+      public function get labelWidth():Number {
+        return _labelWidth;
+      }
+
+
+      /**
+       * @private
+       */
+      private function init():void {
+        gradient = new Shape();
+        drawGradient(leftColor, middleColor, rightColor);
+        rawChildren.addChild(gradient);
+
+        addEventListener(ResizeEvent.RESIZE, onResize);
+      }
+
+
+      /**
+       * Draw a horizontal linear gradient image.
+       *
+       * @param lowerColor  Specifies the left-side color of the gradient.
+       * @param middleColor Specifies the middle color of the gradient.
+       * @param upperColor  Specifies the right-side color of the gradient.
+       */
+      public function drawGradient(lowerColor:uint, middleColor:uint, upperColor:uint):void {
+        // Avoid pre-mature attempts to draw.
+        if (!gradient)
+          return;
+
+        const x:Number = 0;
+        const y:Number = 0;
+        const w:Number = this.width - (2 * labelWidth); // Leave room for the right label.
+        const h:Number = this.height;
+
+        gradient.x = labelWidth;                        // Leave room for the left label.
+
+        const g:Graphics = gradient.graphics;
+        const m:Matrix = new Matrix();
+        m.createGradientBox(w, h);
+
+        g.clear();
+        g.beginGradientFill(GradientType.LINEAR, [lowerColor, middleColor, upperColor], [1, 1, 1], [0x00, 0x7F, 0xFF], m);
+        g.drawRect(x, y, w, h);
+        g.endFill();
+
+        // Cache the parameters to support resizing.
+        this.leftColor = lowerColor;
+        this.middleColor = middleColor;
+        this.rightColor = upperColor;
+      }
+
+
+      /**
+       * Translate control resizing into redrawing the gradient.
+       */
+      private function onResize(event:ResizeEvent):void {
+        drawGradient(leftColor, middleColor, rightColor);
+      }
+
+    ]]>
+  </mx:Script>
+
+  <mx:Label x="0" y="0" width="{labelWidth}" text="{leftText}" textAlign="right" styleName="gradientLabel"/>
+  <mx:Label right="0" y="0" width="{labelWidth}" text="{rightText}" textAlign="left" styleName="gradientLabel"/>
+</mx:Canvas>

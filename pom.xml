@@ -8,6 +8,14 @@
   <name>JuiceKit Visual Analytics</name>
   <url>http://www.juicekit.org/</url>
 
+  <licenses>
+    <license>
+      <name>the Apache License, ASL Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <modules>
     <module>flare</module>
     <module>flexlib</module>
@@ -140,4 +148,23 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+
+  <scm>
+    <connection>scm:git:git://github.com/jonbuffington/juicekit.git</connection>
+    <developerConnection>scm:git:git@github.com:jonbuffington/juicekit.git</developerConnection>
+    <url>http://github.com/jonbuffington/juicekit/tree/master</url>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>http://juicekit.org/nexus/content/repositories/snapshots</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+    <repository>
+      <id>releases</id>
+      <url>http://juicekit.org/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
+
 </project>

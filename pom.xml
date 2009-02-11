@@ -8,6 +8,10 @@
   <name>JuiceKit Visual Analytics</name>
   <url>http://www.juicekit.org/</url>
 
+  <prerequisites>
+    <maven>2.0.9</maven>
+  </prerequisites>
+
   <licenses>
     <license>
       <name>the Apache License, ASL Version 2.0</name>
@@ -27,52 +31,54 @@
   </properties>
 
   <build>
-    <plugins>
-      <!-- Use Java 5 VM as a minimum deployment target. -->
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>flex-compiler-mojo</artifactId>
-        <version>${flex-mojos.version}</version>
-        <dependencies>
-          <dependency>
-            <groupId>com.adobe.flex</groupId>
-            <artifactId>compiler</artifactId>
-            <version>${flex.sdk.version}</version>
-            <type>pom</type>
-          </dependency>
-        </dependencies>
-        <extensions>true</extensions>
-        <configuration>
-          <headlessServer>true</headlessServer>
-          <locales>
-            <locale>en_US</locale>
-          </locales>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>asdoc-mojo</artifactId>
-        <version>${flex-mojos.version}</version>
-        <configuration>
-          <headlessServer>true</headlessServer>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.adobe.flex</groupId>
-            <artifactId>compiler</artifactId>
-            <version>${flex.sdk.version}</version>
-            <type>pom</type>
-          </dependency>
-        </dependencies>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <!-- Use Java 5 VM as a minimum deployment target. -->
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.5</source>
+            <target>1.5</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>info.flex-mojos</groupId>
+          <artifactId>flex-compiler-mojo</artifactId>
+          <version>${flex-mojos.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.adobe.flex</groupId>
+              <artifactId>compiler</artifactId>
+              <version>${flex.sdk.version}</version>
+              <type>pom</type>
+            </dependency>
+          </dependencies>
+          <extensions>true</extensions>
+          <configuration>
+            <headlessServer>true</headlessServer>
+            <locales>
+              <locale>en_US</locale>
+            </locales>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>info.flex-mojos</groupId>
+          <artifactId>asdoc-mojo</artifactId>
+          <version>${flex-mojos.version}</version>
+          <configuration>
+            <headlessServer>true</headlessServer>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.adobe.flex</groupId>
+              <artifactId>compiler</artifactId>
+              <version>${flex.sdk.version}</version>
+              <type>pom</type>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <dependencyManagement>

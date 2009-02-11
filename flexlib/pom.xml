@@ -127,45 +127,6 @@
       </plugin>
 
       <!--
-        Need to configure the plugin even though the documentation
-        is created during the the 'mvn site' goal and is configured
-        in the reporting section below.
-      -->
-      <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>asdoc-mojo</artifactId>
-        <!--
-          Include configuration here to support the asdoc:asdoc goal.
-        -->
-        <executions>
-          <execution>
-            <id>generate-documentation</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>asdoc</goal>
-            </goals>
-            <configuration>
-              <docSources>
-                <docSource>
-                  ${project.build.sourceDirectory}/org/juicekit/events
-                </docSource>
-                <docSource>
-                  ${project.build.sourceDirectory}/org/juicekit/util
-                </docSource>
-                <docSource>
-                  ${project.build.sourceDirectory}/org/juicekit/visual/controls
-                </docSource>
-                <docSource>
-                  ${project.build.sourceDirectory}/org/juicekit/visual/renderers
-                </docSource>
-              </docSources>
-              <headlessServer>true</headlessServer>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!--
         Add support for Flex Builder's run/debug environment until the
         Maven Integration for Eclipse (m2eclipse) supports SWC
         dependencies.
@@ -225,16 +186,16 @@
         <configuration>
           <docSources>
             <docSource>
-              ${project.build.sourceDirectory}/com/juicekit/events
+              ${project.build.sourceDirectory}/org/juicekit/events
             </docSource>
             <docSource>
-              ${project.build.sourceDirectory}/com/juicekit/util
+              ${project.build.sourceDirectory}/org/juicekit/util
             </docSource>
             <docSource>
-              ${project.build.sourceDirectory}/com/juicekit/visual/controls
+              ${project.build.sourceDirectory}/org/juicekit/visual/controls
             </docSource>
             <docSource>
-              ${project.build.sourceDirectory}/com/juicekit/visual/renderers
+              ${project.build.sourceDirectory}/org/juicekit/visual/renderers
             </docSource>
           </docSources>
           <headlessServer>true</headlessServer>

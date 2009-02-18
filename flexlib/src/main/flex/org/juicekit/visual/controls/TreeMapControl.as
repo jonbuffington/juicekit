@@ -343,8 +343,7 @@ package org.juicekit.visual.controls {
           if (convertData) {
             convertData = false;
 
-            const treeMLReader:TreeMLReader = new TreeMLReader();
-            const tree:Tree = treeMLReader.read(this.data as XML);
+            const tree:Tree = TreeMLReader.read(this.data as XML);
 
             vis.data = tree;
             vis.data.edges.setProperty("visible", false);

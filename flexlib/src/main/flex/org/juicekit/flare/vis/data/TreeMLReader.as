@@ -3,13 +3,13 @@
  * *************************************************************************
  *
  * Copyright 2007-2009 Juice, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -45,7 +45,7 @@ package org.juicekit.flare.vis.data {
      *
      * @return Returns a Tree instance containing input data.
      */
-    public function read(input:XML):Tree {
+    public static function read(input:XML):Tree {
       const tree:Tree = new Tree();
       const root:NodeSprite = tree.addRoot();
       const typeMap:Object = parseAttrDecls(input);
@@ -57,7 +57,7 @@ package org.juicekit.flare.vis.data {
      * Parse a node in the TreeML input to both extract TreeML attributes
      * and decend into child nodes.
      */
-    private function parse(node:XML, typeMap:Object, tree:Tree, nodeSprite:NodeSprite):Tree {
+    private static function parse(node:XML, typeMap:Object, tree:Tree, nodeSprite:NodeSprite):Tree {
       // 1. Parse this node's data values;
       nodeSprite.data = parseAttrData(node, typeMap);
 
@@ -89,7 +89,7 @@ package org.juicekit.flare.vis.data {
      * @return Returns an ActionScript object containing the parsed
      * nodes TreeML attributes.
      */
-    private function parseAttrData(node:XML, typeMap:Object):Object {
+    private static function parseAttrData(node:XML, typeMap:Object):Object {
       const data:Object = {};
       var name:String;
       for each (var attr:XML in node[ATTR]) {
@@ -108,7 +108,7 @@ package org.juicekit.flare.vis.data {
      * @return Returns a look-up map object of where DataUtil types
      *  are mapped to TreeML attribute names.
      */
-    private function parseAttrDecls(treeml:XML):Object {
+    private static function parseAttrDecls(treeml:XML):Object {
       const decls:Object = {};
       const attrs:XML = treeml[DECLS][0];
       for each (var decl:XML in attrs[DECL]) {

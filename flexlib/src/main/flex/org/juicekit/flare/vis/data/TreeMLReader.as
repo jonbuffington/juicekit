@@ -22,6 +22,7 @@
 
 package org.juicekit.flare.vis.data {
   import flare.data.DataUtil;
+  import flare.util.Property;
   import flare.util.Shapes;
   import flare.vis.data.NodeSprite;
   import flare.vis.data.Tree;
@@ -117,6 +118,51 @@ package org.juicekit.flare.vis.data {
       return decls;
     }
 
+
+    /**
+     * Check the a <code>Property</code>'s values to determine if 1) the children
+     * sum to the parent value and, 2) the values are non-negative values.
+     *
+     * @param rootNode Is the root node of a parsed data set. This value is often
+     * the <code>root</code> property of the <code>Tree</code> returned
+     * using the <code>parse</code> function.
+     *
+     * @return Returns true if the values pass the above two rules.
+     */
+    public static function checkSizeValues(rootNode:NodeSprite, property:Property):Boolean {
+      // Negative values are not permitted for size values.
+      const rootValue:Number = property.getValue(rootNode) as Number;
+      if (rootValue < 0) {
+        trace(rootNode.data.name + " has a negative size value = " + rootValue.toString());
+        return false;
+      }
+
+      // A leaf always validates.
+      const childCnt:uint = rootNode.childDegree;
+      if (childCnt === 0)
+        return true;
+
+      var validates:Boolean = false;
+      var childrenSum:Number = 0;
+
+      for (var i:uint = 0, ns:NodeSprite; i < childCnt; ++i) {
+        ns = rootNode.getChildNode(i);
+        validates = checkSizeValues(ns, property);
+        if (!validates)
+          break;
+        childrenSum += property.getValue(ns) as Number;
+      }
+
+      // Only check if all children validate.
+      if (validates) {
+        // The sum of the children must equal the parent.
+        validates = childrenSum === rootValue;
+        if (!validates) {
+          trace("The children of " + rootNode.data.name + " sum to " + childrenSum + " while the parent claims " + rootValue);
+        }
+      }
+      return validates;
+    }
 
     // -- writer ----------------------------------------------------------
 

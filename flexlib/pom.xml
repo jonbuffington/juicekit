@@ -62,6 +62,7 @@
               org.juicekit.util.helper.GraphicsUtil
             </classEntry>
             <classEntry>org.juicekit.util.helper.StringUtil</classEntry>
+            <classEntry>org.juicekit.util.model.ModelObject</classEntry>
             <classEntry>
               org.juicekit.visual.controls.AutoTextField
             </classEntry>

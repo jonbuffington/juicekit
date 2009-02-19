@@ -17,6 +17,7 @@
 <classEntry path="org.juicekit.util.helper.Formatter"/>
 <classEntry path="org.juicekit.util.helper.GraphicsUtil"/>
 <classEntry path="org.juicekit.util.helper.StringUtil"/>
+<classEntry path="org.juicekit.util.model.ModelObject"/>
 <classEntry path="org.juicekit.visual.controls.AutoTextField"/>
 <classEntry path="org.juicekit.visual.controls.DMAMapControl"/>
 <classEntry path="org.juicekit.visual.controls.FlareControlBase"/>

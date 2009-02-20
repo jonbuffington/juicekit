@@ -1,0 +1,58 @@
+~~
+~~ Copyright 2007-2009 Juice, Inc.
+~~
+~~ Licensed under the Apache License, Version 2.0 (the "License");
+~~ you may not use this file except in compliance with the License.
+~~ You may obtain a copy of the License at
+~~
+~~     http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing, software
+~~ distributed under the License is distributed on an "AS IS" BASIS,
+~~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~ See the License for the specific language governing permissions and
+~~ limitations under the License.
+~~
+  ---------------
+  Getting Started
+  ---------------
+
+Overview
+
+  The following sections taking you through downloading and building the SDK.   To use to JuiceKit for Flex library, you must include a copy of <<<flexlib-${currentVersion}.swc>>> in your Flex project's build path.
+
+  If you are using Flex Builder 3, the simplest approach is to copy <<<flexlib-${currentVersion}.swc>>> into your Flex project's libs directory. The other approach is to modify your Flex project's "Properties > Flex Build Path > Library Path > Add SWC..." and select the <<<flexlib-${currentVersion}.swc>>> file.
+
+
+Requirements
+
+  You need to have the following technologies to download and build the source.
+
+  * {{{http://git-scm.com/}Git}}, an open source, distributed version control system
+
+  * {{{http://maven.apache.org/}Apache Maven 2}}, an open source software project management tool
+
+
+Downloading the source
+
+  You download the current source code from {{{http://github.com/jonbuffington/juicekit/tree/master}Github}} by cloning the repository.
+
++-------------------------------+
+$ git clone git://github.com/jonbuffington/juicekit.git
++-------------------------------+
+
+  After cloning JuiceKit from github you need to do a submodule update to pull in the patched flare library.
+
++-------------------------------+
+$ git submodule update -i
++-------------------------------+
+
+Building the source
+
+  To build the the library from source, issue the following Maven2 command.
+
++-------------------------------+
+$ mvn clean install
++-------------------------------+
+
+  After the build completes, you will find the <<<flexlib-${currentVersion}.swc>>> library in <<<flexlib/target/>>> directory.

@@ -5,12 +5,18 @@
   <artifactId>juicekit</artifactId>
   <packaging>pom</packaging>
   <version>1.2.0-SNAPSHOT</version>
-  <name>JuiceKit Visual Analytics</name>
+  <name>JuiceKit for Visual Analytics</name>
   <url>http://www.juicekit.org/</url>
+  <inceptionYear>2007</inceptionYear>
 
   <prerequisites>
     <maven>2.0.9</maven>
   </prerequisites>
+
+  <organization>
+    <name>Juice, Inc.</name>
+    <url>http://www.juiceanalytics.com/</url>
+  </organization>
 
   <licenses>
     <license>
@@ -28,6 +34,7 @@
   <properties>
     <flex-mojos.version>2.0.3</flex-mojos.version>
     <flex.sdk.version>3.2.0.3958</flex.sdk.version>
+    <currentVersion>${project.version}</currentVersion>
   </properties>
 
   <build>
@@ -171,6 +178,24 @@
       <id>releases</id>
       <url>http://juicekit.org/nexus/content/repositories/releases</url>
     </repository>
+    <site>
+      <id>website</id>
+      <url>scp://www.juicekit.org/var/www/</url>
+    </site>
   </distributionManagement>
 
+  <ciManagement>
+    <system>Hudson</system>
+    <url>http://www.juicekit.org/hudson/job/juicekit-master/</url>
+  </ciManagement>
+
+  <mailingLists>
+    <mailingList>
+      <name>General Discussion</name>
+      <subscribe>juicekit+subscribe@googlegroups.com</subscribe>
+      <unsubscribe>juicekit+unsubscribe@googlegroups.com</unsubscribe>
+      <post>juicekit@googlegroups.com</post>
+      <archive>http://groups.google.com/group/juicekit</archive>
+    </mailingList>
+  </mailingLists>
 </project>

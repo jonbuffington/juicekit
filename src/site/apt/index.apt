@@ -1,0 +1,77 @@
+~~
+~~ Copyright 2007-2009 Juice, Inc.
+~~
+~~ Licensed under the Apache License, Version 2.0 (the "License");
+~~ you may not use this file except in compliance with the License.
+~~ You may obtain a copy of the License at
+~~
+~~     http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing, software
+~~ distributed under the License is distributed on an "AS IS" BASIS,
+~~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~ See the License for the specific language governing permissions and
+~~ limitations under the License.
+~~
+  ----------------
+  JuiceKit\231 SDK
+  ----------------
+
+Overview
+
+  The JuiceKit is a Software Development Kit (SDK) for building Information Experience\231 applications. The SDK can be used by web designers and developers to build graphically rich and interactive information displays. The JuiceKit is currently integrates with {{{http://www.adobe.com/products/flex/}Adobe Flex}} to create components that are easy to implement and aesthetically pleasing. Components of the JuiceKit include controls, visualizations, and utility classes.
+
+[images/example.png] JuiceKit example application
+
+Examples
+
+  The JuiceKit SDK has been used to build many information visualizations and customer applications. Here are a few simple examples:
+
+  *  {{{http://demos.juiceanalytics.com/juicekit/}JuiceKit Demo Application}} - A simple demo application that shows a number of the types of visualizations that are pretty easily constructed using the SDK.
+
+  *  {{{http://recoveryact.juiceanalytics.com/treemap/}Federal Recovery Act Treemap}} - This is an application of the JuiceKit SDK Treemap visualization to better understand the components of the American Recovery and Reinvestment Act of 2009.
+
+  []
+  For other examples of implementations of the JuiceKit for customers, take a look at this {{{http://www.juiceanalytics.com/writing/announcing-juicekit-sdk-open-source/}recent article}}.
+
+Requirements
+
+  You can {{{http://github.com/jonbuffington/juicekit/tree/master}download}} JuiceKit\231 from the Github collaborative version control system.
+
+  Don't forget these requirements before you get started:
+
+  * {{{http://get.adobe.com/flashplayer/}Adobe Flash Player}} 9.0.124 or later
+
+  * {{{http://opensource.adobe.com/flex/}Adobe Flex SDK}}
+
+  * {{{http://www.adobe.com/go/flex_trial}Adobe Flex Builder}} IDE (optional)
+
+  []
+
+  You can learn more in {{{start.html}Getting Started}}.
+
+Contribute
+
+  We really want the community to contribute back to make JuiceKit even better. You can help us all out in three ways:
+
+  *  Get involved in the {{{http://groups.google.com/group/juicekit}JuiceKit development community}} discussion group on Google Groups to learn about best practices, tips and tricks, and questions and answers.
+
+  *  \[Coming Soon\] Make suggestions and file defects in our {{{issue-tracking.html}issue tracking}} system. You can help us stay focussed on the areas that you believe to be most important.
+
+  *  Finally, if you make changes to the code and want to submit them for review and possible inclusion into the code base, you can do that on {{{http://github.com/jonbuffington/juicekit/tree/master}Github}}.
+
+Coming Soon
+
+  We are continually looking for additional enhancements to add to the JuiceKit roadmap. Here are a few items that we are planning on adding in the near future:
+
+  * Word Cloud Renderer
+
+  * Word Tree Control
+
+  * Consistent out-of-the-box styling for all visualizations
+
+  * JavaScriptLib
+
+  []
+
+  If there are other enhancements you'd like to see, you can make requests using our JuiceKit {{{issue-tracking.html}issue tracker}}.

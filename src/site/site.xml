@@ -2,7 +2,7 @@
 <project>
   <bannerLeft>
     <name>${project.name}</name>
-    <href>http://www.juicekit.org/</href>
+    <href>index.html</href>
   </bannerLeft>
   <bannerRight>
     <name>Juice, Inc.</name>
@@ -16,6 +16,7 @@
     </links>
 
     <menu name="${project.name}">
+      <item name="Introduction" href="index.html"/>
       <item name="Getting Started" href="start.html"/>
       <item name="Download" href="download.html"/>
       <item name="Documentation" href="documentation.html"/>

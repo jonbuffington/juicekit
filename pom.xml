@@ -138,6 +138,16 @@
 
   <repositories>
     <repository>
+      <id>juicekit-repository</id>
+      <url>http://www.juicekit.org/nexus/content/repositories/releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>flex-mojos-repository</id>
       <url>http://svn.sonatype.org/flexmojos/repository/</url>
       <releases>
@@ -180,7 +190,7 @@
     </repository>
     <site>
       <id>website</id>
-      <url>scp://www.juicekit.org/var/www/</url>
+      <url>scpexe://www.juicekit.org/var/www/</url>
     </site>
   </distributionManagement>
 

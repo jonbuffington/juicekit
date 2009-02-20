@@ -13,15 +13,21 @@
 ~~ See the License for the specific language governing permissions and
 ~~ limitations under the License.
 ~~
-  ---------------
-  Getting Started
-  ---------------
+  ---------------------------------
+  Getting Started with JuiceKit\231
+  ---------------------------------
 
 Overview
 
-  The following sections taking you through downloading and building the SDK.   To use to JuiceKit for Flex library, you must include a copy of <<<flexlib-${currentVersion}.swc>>> in your Flex project's build path.
+  The following sections taking you through downloading and building the SDK.
+  To use to JuiceKit\231 for Flex library, you must include a copy
+  of <<<flexlib-${currentVersion}.swc>>> in your Flex project's build path.
 
-  If you are using Flex Builder 3, the simplest approach is to copy <<<flexlib-${currentVersion}.swc>>> into your Flex project's libs directory. The other approach is to modify your Flex project's "Properties > Flex Build Path > Library Path > Add SWC..." and select the <<<flexlib-${currentVersion}.swc>>> file.
+  If you are using Flex Builder 3, the simplest approach is to copy
+  <<<flexlib-${currentVersion}.swc>>> into your Flex project's libs directory.
+  The other approach is to modify your Flex project's
+  "Properties > Flex Build Path > Library Path > Add SWC..." and
+  select the <<<flexlib-${currentVersion}.swc>>> file.
 
 
 Requirements

@@ -19,7 +19,7 @@
 
 Overview
 
-  The JuiceKit is a Software Development Kit (SDK) for building Information Experience\231 applications. The SDK can be used by web designers and developers to build graphically rich and interactive information displays. The JuiceKit is currently integrates with {{{http://www.adobe.com/products/flex/}Adobe Flex}} to create components that are easy to implement and aesthetically pleasing. Components of the JuiceKit include controls, visualizations, and utility classes.
+  The JuiceKit\231 is a Software Development Kit (SDK) for building Information Experience\231 applications. The SDK can be used by web designers and developers to build graphically rich and interactive information displays. The JuiceKit is currently integrates with {{{http://www.adobe.com/products/flex/}Adobe Flex}} to create components that are easy to implement and aesthetically pleasing. Components of the JuiceKit include controls, visualizations, and utility classes.
 
 [images/example.png] JuiceKit example application
 

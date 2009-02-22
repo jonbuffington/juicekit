@@ -47,18 +47,19 @@ Downloading the source
 $ git clone git://github.com/jonbuffington/juicekit.git
 +-------------------------------+
 
-  After cloning JuiceKit from github you need to do a submodule update to pull in the patched flare library.
+  After cloning JuiceKit from github you need to do a submodule update to pull in the patched flare library:
 
 +-------------------------------+
+$ cd juicekit
 $ git submodule update -i
 +-------------------------------+
 
 Building the source
 
-  To build the the library from source, issue the following Maven2 command.
+  The following command assumes you are using a Bourne/Bash shell (the default on many operating systems). To build the the library from source, issue the following Maven2 command.
 
 +-------------------------------+
-$ mvn clean install
+$ MAVEN_OPTS="-Xms64m -Xmx256m" mvn clean install site
 +-------------------------------+
 
-  After the build completes, you will find the <<<flexlib-${currentVersion}.swc>>> library in <<<flexlib/target/>>> directory.
+  After the build completes, you will find the <<<flexlib-${currentVersion}.swc>>> library in <<<flexlib/target/>>> directory. The flexlib API documentation index will be located at <<<flexlib/target/site/asdoc/index.html>>>.

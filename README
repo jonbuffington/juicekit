@@ -11,11 +11,13 @@ You can download the current development source from github.
 
 After cloning JuiceKit from github you need to do a submodule update to pull in the patched flare library.
 
-  $ git submodule update -i
-  
-To build the the library from source, issue the following Maven2 command.
+  $ cd juicekit
 
-  $ mvn clean package
+  $ git submodule update -i
+
+To build the the library from source, issue the following Maven2 command:
+
+  $ MAVEN_OPTS="-Xms64m -Xmx256m" mvn clean install site
 
 The JuiceKit for Flash/Flex library and documentation will be found in the ./flexlib/target directory after the build completes.
 
@@ -26,7 +28,7 @@ The API reference documentation can be by viewed by loading doc/index.html file 
 
 Requirements
 ------------
-JuiceKit library for Adobe Flash/Flex (flexlib) is built as an Adobe Flex library file (SWC). The only required software is Adobe Flex SDK version 3.2.0.3958 or Flex Builder 3 Standard. To build the package from source, you will need Maven 2.0.9 or later. 
+JuiceKit library for Adobe Flash/Flex (flexlib) is built as an Adobe Flex library file (SWC). The only required software is Adobe Flex SDK version 3.2.0.3958 or Flex Builder 3 Standard. To build the package from source, you will need Maven 2.0.9 or later.
 
 
 Release History

@@ -20,4 +20,8 @@
 Download
 
   We will have packaged distributions available soon. In the meantime, you
-  can build a distribution from the {{{source-repository.html}source}}.
+  have two ways to use the project:
+
+  * Download the latest build from the {{{integration.html}continuous integration server}}.
+
+  * Build the library and documentation from the {{{source-repository.html}source}} following the {{{start.html}Getting Started}} instructions.

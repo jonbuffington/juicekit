@@ -199,6 +199,11 @@
     <url>http://www.juicekit.org/hudson/job/juicekit-master/</url>
   </ciManagement>
 
+  <issueManagement>
+    <system>Lighthouse</system>
+    <url>http://juicekit.lighthouseapp.com:80/projects/26065-juicekit/overview/</url>
+  </issueManagement>
+
   <mailingLists>
     <mailingList>
       <name>General Discussion</name>

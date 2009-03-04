@@ -3,13 +3,13 @@
  * *************************************************************************
  *
  * Copyright 2007-2009 Juice, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,9 +21,6 @@
 
 
 package org.juicekit.visual.controls {
-  import org.juicekit.util.helper.CSSUtil;
-  import org.juicekit.visual.flash.controls.USMap;
-
   import flash.display.DisplayObjectContainer;
   import flash.display.MovieClip;
   import flash.display.SimpleButton;
@@ -31,9 +28,13 @@ package org.juicekit.visual.controls {
   import flash.filters.BitmapFilterQuality;
   import flash.filters.GlowFilter;
   import flash.geom.Rectangle;
+  import flash.text.AntiAliasType;
   import flash.text.TextField;
   import flash.text.TextFieldAutoSize;
   import flash.text.TextFormat;
+
+  import org.juicekit.util.helper.CSSUtil;
+  import org.juicekit.visual.flash.controls.USMap;
 
   include "../styles/metadata/TextStyles.as";
 
@@ -191,6 +192,7 @@ package org.juicekit.visual.controls {
 
         tf = new TextField();
         tf.autoSize = TextFieldAutoSize.LEFT;
+        tf.antiAliasType = AntiAliasType.ADVANCED;
 
         tf.name = stateSB.name;
         tf.text = stateSB.name;
@@ -226,6 +228,7 @@ package org.juicekit.visual.controls {
       for (var i:int = 0; i < numLabels; i++) {
         tf = _labelLayer.getChildAt(i) as TextField;
         tf.setTextFormat(format);
+        tf.embedFonts = CSSUtil.isEmbeddedFont(format);
         if (tf.filters.length === 0) {
           tf.filters = [labelFilter];
         }

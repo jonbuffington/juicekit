@@ -3,13 +3,13 @@
  * *************************************************************************
  *
  * Copyright 2007-2009 Juice, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,6 +21,10 @@
 
 
 package org.juicekit.util.helper {
+  import flash.text.Font;
+  import flash.text.FontStyle;
+  import flash.text.TextFormat;
+
   import mx.styles.CSSStyleDeclaration;
   import mx.styles.StyleManager;
 
@@ -76,6 +80,47 @@ package org.juicekit.util.helper {
         StyleManager.setStyleDeclaration(className, styleDecl, true);
       }
       return styleDecl;
+    }
+
+
+    /**
+     * Returns true when the font glyph outlines for a given
+     * <code>TextFormat</code> are embedded in the SWF.
+     *
+     * @param tf Is the <code>TextFormat</code> to check.
+     *
+     * @return Returns true if an embedded font exists.
+     */
+    public static function isEmbeddedFont(tf:TextFormat):Boolean {
+      const fontName:String = tf.font;
+
+      const embeddedFonts:Array = Font.enumerateFonts();
+      const embeddedFontsLen:uint = embeddedFonts.length;
+      for (var ix:int = 0; ix < embeddedFontsLen; ++ix) {
+        var font:Font = Font(embeddedFonts[ix]);
+
+        if (font.fontName === fontName) {
+          var found:Boolean = false;
+          switch (font.fontStyle) {
+            case FontStyle.BOLD_ITALIC:
+              found = tf.bold && tf.italic;
+              break;
+            case FontStyle.BOLD:
+              found = tf.bold && !tf.italic;
+              break;
+            case FontStyle.ITALIC:
+              found = !tf.bold && tf.italic;
+              break;
+            case FontStyle.REGULAR:
+              found = !tf.bold && !tf.italic;
+              break;
+          }
+          if (found) {
+            return true;
+          }
+        }
+      }
+      return false;
     }
 
   }

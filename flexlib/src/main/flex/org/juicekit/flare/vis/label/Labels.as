@@ -3,13 +3,13 @@
  * *************************************************************************
  *
  * Copyright 2007-2009 Juice, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -35,8 +35,11 @@ package org.juicekit.flare.vis.label {
   import flash.events.Event;
   import flash.filters.BitmapFilterQuality;
   import flash.filters.GlowFilter;
+  import flash.text.AntiAliasType;
   import flash.text.TextField;
   import flash.text.TextLineMetrics;
+
+  import org.juicekit.util.helper.CSSUtil;
 
 
   /**
@@ -262,6 +265,7 @@ package org.juicekit.flare.vis.label {
 
             if (fmt) {
               label.textFormat = fmt;
+              label.textMode = CSSUtil.isEmbeddedFont(fmt) ? TextSprite.EMBED : TextSprite.BITMAP;
 
               switch (fmt.horizontalAnchor) {
                 case LabelFormat.LEFT:
@@ -360,6 +364,7 @@ package org.juicekit.flare.vis.label {
       label.textField.selectable = false;
       label.mouseEnabled = false;
       label.textField.filters = [labelFilter];
+      label.textField.antiAliasType = AntiAliasType.ADVANCED;
 
       container.addChild(label);
 

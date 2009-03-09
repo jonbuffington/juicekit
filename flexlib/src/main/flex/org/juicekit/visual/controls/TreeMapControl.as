@@ -21,11 +21,6 @@
 
 
 package org.juicekit.visual.controls {
-  import org.juicekit.flare.vis.data.TreeMLReader;
-  import org.juicekit.flare.vis.label.LabelFormat;
-  import org.juicekit.flare.vis.label.Labels;
-  import org.juicekit.util.helper.CSSUtil;
-
   import flare.scale.ScaleType;
   import flare.util.palette.ColorPalette;
   import flare.vis.data.Data;
@@ -37,7 +32,13 @@ package org.juicekit.visual.controls {
   import flare.vis.operator.layout.TreeMapLayout;
 
   import flash.events.MouseEvent;
+  import flash.filters.ColorMatrixFilter;
   import flash.geom.Rectangle;
+
+  import org.juicekit.flare.vis.data.TreeMLReader;
+  import org.juicekit.flare.vis.label.LabelFormat;
+  import org.juicekit.flare.vis.label.Labels;
+  import org.juicekit.util.helper.CSSUtil;
 
 
   include "../styles/metadata/TextStyles.as";
@@ -125,34 +126,6 @@ package org.juicekit.visual.controls {
   [Style(name="maxEncodedColor", type="uint", format="Color", inherit="no")]
 
   /**
-   * Determines the alpha transparency values for rectangle highlight strokes.
-   * The first array alpha value maps to the
-   * first level of data in the data tree, the second alpha value maps
-   * to second level of data in the data tree, and so forth. Any data levels
-   * deeper than the array has elements use the last element to determine
-   * alpha value.
-   *
-   * @default [0.6]
-   */
-  [Style(name="highlightAlphas", type="Array", arrayType="Number", inherit="no")]
-
-  /**
-   * Each array element determines the roll-over highlight color of the
-   * rectangles' stroke at a given depth in the data tree. The first array
-   * highlight color maps to the irst level of data in the data tree,
-   * the second array highlight color maps to second level of data in
-   * the data tree, and so forth. Any data levels
-   * deeper than the array has elements use the last element to determine
-   * stroke color. For example, <code>[0x00000000, 0xffFFFFFF]</code> specifies
-   * that the root rectangle does not have a stroke color but all subsequent
-   * data depths have a opaque white stroke.
-   *
-   * @default [0x0000AA]
-   */
-  [Style(name="highlightColors", type="Array", arrayType="uint", format="Color", inherit="no")]
-
-
-  /**
    * The TreeMapControl class visualizes large hierarchical data sets.
    * Data properties are used to encode both the rectangles' size and color.
    *
@@ -175,8 +148,6 @@ package org.juicekit.visual.controls {
         , minEncodedColor: 0xFF0000
         , midEncodedColor: 0x000000
         , maxEncodedColor: 0x00FF00
-        , highlightAlphas: [0.6]
-        , highlightColors: [0xFFFF00]
         }
       );
     }
@@ -724,6 +695,23 @@ package org.juicekit.visual.controls {
     }
 
 
+    /*
+     * Create a brightness filter to highlight the current
+     * mouse cursor position on an treemap instance.
+     */
+    private static const brightnessMatrix:Array = [ 1, 0, 0, 0, 30,
+                                                    0, 1, 0, 0, 30,
+                                                    0, 0, 1, 0, 30,
+                                                    0, 0, 0, 1,  0 ];
+    private static const brightnessFilter:ColorMatrixFilter = new ColorMatrixFilter(brightnessMatrix);
+
+    /*
+     * Internal property name used to preserve node filters prior
+     * to applying the brightness filter.
+     */
+    private static const FILTERS_PROP:String = "#FILTERS#";
+
+
     /**
      * @inheritDoc
      */
@@ -732,12 +720,12 @@ package org.juicekit.visual.controls {
 
       const ns:NodeSprite = event.target as NodeSprite;
       if (ns) {
-        // Hide zero-width lines.
-        if (ns.lineWidth !== 0) {
-          // Restore the stroke color.
-          const alphas:Array = getStyle("strokeAlphas");
-          const colors:Array = getStyle("strokeColors");
-          ns.lineColor = computeARGB(colors, alphas, ns.depth);
+        if (ns.props.hasOwnProperty(FILTERS_PROP)) {
+          ns.filters = ns.props[FILTERS_PROP];
+          delete ns.props[FILTERS_PROP];
+        }
+        else if (ns.filters && ns.filters.length > 0) {
+          ns.filters = [];
         }
       }
     }
@@ -750,15 +738,29 @@ package org.juicekit.visual.controls {
       super.onMouseOver(event);
 
       const ns:NodeSprite = event.target as NodeSprite;
-      if (ns) {
-        if (ns.lineWidth !== 0) {
-          // Set the line color to the highlight style.
-          const alphas:Array = getStyle("highlightAlphas");
-          const colors:Array = getStyle("highlightColors");
-          ns.lineColor = computeARGB(colors, alphas, ns.depth);
+      if (ns !== null && highlightRollOver) {
+        if (ns.filters && ns.filters.length > 0) {
+          ns.props[FILTERS_PROP] = ns.filters;
+          ns.filters.push(brightnessFilter);
+          ns.filters = ns.filters;
+        }
+        else {
+          ns.filters = [brightnessFilter];
         }
       }
     }
+
+
+    [Inspectable(category="General")]
+    /**
+     * Specifies whether the TreeMapControl should provide a highlighting
+     * effect on mouse roll-over. The effect is to increase the brightness
+     * of the rectangle color.
+     *
+     * @default true
+     */
+    public var highlightRollOver:Boolean = true;
+
 
     private function createColorEncoder():ColorEncoder {
       return new ColorEncoder(asFlareProperty(_colorEncodingField)

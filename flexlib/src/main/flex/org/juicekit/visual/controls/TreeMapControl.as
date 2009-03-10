@@ -35,7 +35,7 @@ package org.juicekit.visual.controls {
   import flash.filters.ColorMatrixFilter;
   import flash.geom.Rectangle;
 
-  import org.juicekit.flare.vis.data.TreeMLReader;
+  import org.juicekit.events.JuiceKitEvent;
   import org.juicekit.flare.vis.label.LabelFormat;
   import org.juicekit.flare.vis.label.Labels;
   import org.juicekit.util.helper.CSSUtil;
@@ -310,13 +310,10 @@ package org.juicekit.visual.controls {
           updateTreemap = true;
         }
 
-        if (this.data is XML) {
-          if (convertData) {
-            convertData = false;
+        if (this.data is Tree) {
+          if (newDataLoaded) {
+            newDataLoaded = false;
 
-            const tree:Tree = TreeMLReader.read(this.data as XML);
-
-            vis.data = tree;
             vis.data.edges.setProperty("visible", false);
             styleNodes();
 
@@ -348,6 +345,7 @@ package org.juicekit.visual.controls {
      * @param nodeSprite Reference to a <code>NodeSprite</code> within
      * the <code>data</code> property current instance.
      */
+    [Bindable(event="dataRootChange")]
     public function set dataRoot(nodeSprite:NodeSprite):void {
       if (!nodeSprite) {
         throw new ArgumentError("NodeSprite must exist within the data tree.");
@@ -365,6 +363,7 @@ package org.juicekit.visual.controls {
         labels.ignoreRemovals = false;
         dataRootChanged = true;
         invalidateProperties();
+        dispatchEvent(new JuiceKitEvent(JuiceKitEvent.DATA_ROOT_CHANGE));
       }
       else {
         throw new ArgumentError("A visualization must already have data to manipulate the root.");
@@ -394,38 +393,25 @@ package org.juicekit.visual.controls {
 
 
     /**
-     * Flag whether a new data set needs to be loaded or not.
+     * Flag whether a new data set is loaded or not.
      */
-    private var convertData:Boolean = false;
+    private var newDataLoaded:Boolean = false;
 
     /**
-     * Sets the data value to an <code>XML</code> data
-     * object to use for encoding the size and color attributes
+     * Sets the data value to a <code>Tree</code> data
+     * object used for rendering the size and color attributes
      * of the treemap visualization.
      *
-     * <p>The value is an <code>XML</code> object containing
-     * hierarchical data objects whose properties
-     * will be used to change the appearance of the treemap.
-     * The <code>XML</code> object must follow the TreeML XML format.
-     * <a href="http://cs.marlboro.edu/courses/fall2006/tutorials/information_visualization/TreeML">
-     * TreeML</a> is an XML format originally created for the 2003 InfoVis
-     * conference contest. A DTD (Document Type Definition) for TreeML is
-     * <a href="http://www.nomencurator.org/InfoVis2003/download/treeml.dtd">
-     * available</a>.</p>
+     * @see flare.vis.data.Tree
      */
     override public function set data(value:Object):void {
-      function verify(o:Object):Object {
-        if (o is XML) {
-          return o;
-        }
-        else {
-          return null;
-        }
+      value = value is Tree ? value : null;
+      newDataLoaded = value !== this.data;
+      if (newDataLoaded) {
+        vis.data = value as Tree;
+        super.data = value;
+        dispatchEvent(new JuiceKitEvent(JuiceKitEvent.DATA_ROOT_CHANGE));
       }
-
-      const currentData:Object = this.data;
-      super.data = value ? verify(value) : null;
-      convertData = currentData !== this.data;
     }
 
 

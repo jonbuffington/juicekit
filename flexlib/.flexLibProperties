@@ -5,6 +5,7 @@
 <classEntry path="org.juicekit.events.DataMouseEvent"/>
 <classEntry path="org.juicekit.events.InactivityEvent"/>
 <classEntry path="org.juicekit.events.InactivityMonitor"/>
+<classEntry path="org.juicekit.events.JuiceKitEvent"/>
 <classEntry path="org.juicekit.flare.vis.data.TreeMLReader"/>
 <classEntry path="org.juicekit.flare.vis.label.ILabelFormatter"/>
 <classEntry path="org.juicekit.flare.vis.label.LabelFormat"/>

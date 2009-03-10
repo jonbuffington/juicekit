@@ -50,6 +50,7 @@
             <classEntry>
               org.juicekit.events.InactivityMonitor
             </classEntry>
+            <classEntry>org.juicekit.events.JuiceKitEvent</classEntry>
             <classEntry>
               org.juicekit.util.collection.AlphanumSort
             </classEntry>

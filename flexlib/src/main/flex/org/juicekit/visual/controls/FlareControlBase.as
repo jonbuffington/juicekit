@@ -285,13 +285,14 @@ package org.juicekit.visual.controls {
      */
     private var _transitionPeriod:Number = NaN;
 
-    [Inspectable(category="General")]
     /**
      * Specifies the animation transition time period in seconds. The
      * default value is <code>NaN</code> which disables animation.
      *
      * @default NaN
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set transitionPeriod(seconds:Number):void {
       _transitionPeriod = seconds;
     }

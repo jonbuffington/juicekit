@@ -142,13 +142,14 @@ package org.juicekit.visual.controls {
     // Note: The following stateAbbrField property is included to support
     // backwards compatibilty with prior library releases.
 
-    [Inspectable(category="General")]
     /**
      * Specifies the data <code>Object</code> property name containing
      * a U.S. state two-letter abbreviation.
      *
      * @default "state"
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set stateAbbrField(propertyName:String):void {
       dataKeyField = propertyName;
     }

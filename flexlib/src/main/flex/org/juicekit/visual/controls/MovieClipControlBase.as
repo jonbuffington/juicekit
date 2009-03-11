@@ -394,7 +394,6 @@ package org.juicekit.visual.controls {
      */
     private var _colorEncodingFunction:Function = null;
 
-    [Inspectable(category="General")]
     /**
      * References a function that returns a <code>uint</code>
      * color value that is applied to the graphical element. The function
@@ -407,6 +406,8 @@ package org.juicekit.visual.controls {
      *
      * @default null
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set colorEncodingFunction(value:Function):void {
       _colorEncodingFunction = value;
       invalidateDisplayList();
@@ -426,13 +427,14 @@ package org.juicekit.visual.controls {
      */
     private var _dataKeyField:String = "name";
 
-    [Inspectable(category="General")]
     /**
      * Specifies the data <code>Object</code> property name
      * that maps to <code>SimpleButton</code> instance names.
      *
      * @default "name"
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set dataKeyField(value:String):void {
       if (value !== _dataKeyField) {
         _dataKeyField = value;

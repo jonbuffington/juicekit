@@ -414,6 +414,13 @@ package org.juicekit.visual.controls {
       }
     }
 
+    /**
+     * @private
+     */
+    override public function get data():Object {
+      return super.data;
+    }
+
 
     /**
      * Store the colorEncodingField property.
@@ -421,13 +428,14 @@ package org.juicekit.visual.controls {
     private var _colorEncodingField:String = "color";
     private var _colorEncodingUpdated:Boolean = false;
 
-    [Inspectable(category="General")]
     /**
      * Specifies a data <code>Object</code> property's name used
      * to encode a treemap rectangle's color.
      *
      * @default "color"
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set colorEncodingField(propertyName:String):void {
       _colorEncodingField = propertyName;
       _colorEncodingUpdated = true;
@@ -488,13 +496,14 @@ package org.juicekit.visual.controls {
     private var _sizeEncodingField:String = "size";
     private var _sizeEncodingUpdated:Boolean = false;
 
-    [Inspectable(category="General")]
     /**
      * Specifies a data <code>Object</code> property's name used
      * to encode a treemap rectangle's visual size.
      *
      * @default "size"
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set sizeEncodingField(propertyName:String):void {
       _sizeEncodingField = propertyName;
       _sizeEncodingUpdated = true;
@@ -515,13 +524,14 @@ package org.juicekit.visual.controls {
     private var _labelEncodingField:String = "label";
     private var _labelEncodingUpdated:Boolean = false;
 
-    [Inspectable(category="General")]
     /**
      * Specifies a data <code>Object</code> property's name used
      * to encode a treemap rectangle's label.
      *
      * @default "label"
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set labelEncodingField(propertyName:String):void {
       _labelEncodingField = propertyName;
       _labelEncodingUpdated = true;
@@ -543,7 +553,6 @@ package org.juicekit.visual.controls {
      */
     private var _minLabelDepth:int = -1;
 
-    [Inspectable(category="General")]
     /**
      * Sets the minimum hierarchy depth that labels will be applied
      * to the visualization's rectangles. The default is <code>-1</code>
@@ -551,6 +560,8 @@ package org.juicekit.visual.controls {
      *
      * @default -1
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set minLabelDepth(value:int):void {
       _minLabelDepth = value;
       _labelDepthUpdated = true;
@@ -570,7 +581,6 @@ package org.juicekit.visual.controls {
      */
     private var _maxLabelDepth:int = -1;
 
-    [Inspectable(category="General")]
     /**
      * Sets the maximum hierarchy depth that labels will be applied
      * to the visualization's rectangles. The default is <code>-1</code>
@@ -578,6 +588,8 @@ package org.juicekit.visual.controls {
      *
      * @default -1
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set maxLabelDepth(value:int):void {
       _maxLabelDepth = value;
       _labelDepthUpdated = true;
@@ -599,13 +611,14 @@ package org.juicekit.visual.controls {
      */
     private var _truncateToFit:Boolean = false;
 
-    [Inspectable(category="General")]
     /**
      * Specifies whether label strings should be truncated to fit within its
      * rectangle's width.
      *
      * @default false
      */
+    [Inspectable(category="General")]
+    [Bindable]
     public function set truncateToFit(flag:Boolean):void {
       _truncateToFit = flag;
       _truncatePropertyChanged = true;

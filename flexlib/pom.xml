@@ -73,6 +73,9 @@
               org.juicekit.visual.controls.TreeMapControl
             </classEntry>
             <classEntry>
+              org.juicekit.visual.controls.TreeMapZoomControl
+            </classEntry>
+            <classEntry>
               org.juicekit.visual.controls.USMapControl
             </classEntry>
             <classEntry>

@@ -24,6 +24,7 @@
 <classEntry path="org.juicekit.visual.controls.FlareControlBase"/>
 <classEntry path="org.juicekit.visual.controls.MovieClipControlBase"/>
 <classEntry path="org.juicekit.visual.controls.TreeMapControl"/>
+<classEntry path="org.juicekit.visual.controls.TreeMapZoomControl"/>
 <classEntry path="org.juicekit.visual.controls.USMapControl"/>
 <classEntry path="org.juicekit.visual.renderers.FilledRectValueRenderer"/>
 <classEntry path="org.juicekit.visual.renderers.HBarRenderer"/>

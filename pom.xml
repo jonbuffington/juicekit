@@ -29,6 +29,7 @@
   <modules>
     <module>flare</module>
     <module>flexlib</module>
+    <module>demos</module>
   </modules>
 
   <properties>

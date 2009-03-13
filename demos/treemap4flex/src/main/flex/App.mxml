@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  * -*- Mode: MXML -*-
+  * *************************************************************************
+  *
+  * Copyright 2007-2009 Juice, Inc.
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  *     http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  *
+  * *************************************************************************
+  -->
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+  layout="vertical"
+  creationComplete="onInit()"
+  xmlns:controls="org.juicekit.visual.controls.*"
+  xmlns:renderers="org.juicekit.visual.renderers.*"
+  xmlns:local="*"
+  >
+
+  <mx:Style source="style.css"/>
+
+  <mx:Script>
+    <![CDATA[
+      import mx.formatters.NumberFormatter;
+      import flare.animate.TransitionEvent;
+      import mx.binding.utils.ChangeWatcher;
+      import flare.vis.data.NodeSprite;
+      import org.juicekit.events.DataMouseEvent;
+      import flare.vis.data.Tree;
+      import flare.util.Property;
+      import org.juicekit.flare.vis.data.TreeMLReader;
+      import mx.events.ColorPickerEvent;
+      import mx.events.ItemClickEvent;
+      import mx.rpc.events.ResultEvent;
+
+
+      /*
+       * ---- Initialization ----
+      */
+
+      private function onInit():void {
+        function initColorPickers():void {
+          minColorPicker.selectedColor = treemap.getStyle("minEncodedColor");
+          maxColorPicker.selectedColor = treemap.getStyle("maxEncodedColor");
+
+          treeMapLegend.drawGradient( minColorPicker.selectedColor
+                                    , treemap.getStyle("midEncodedColor")
+                                    , maxColorPicker.selectedColor);
+        }
+
+        // Set defaults for controls.
+        onEnterDataRange();
+        initColorPickers();
+
+        // Load an initial data set.
+        dataLoader.url = "data/econcensus.xml";
+        dataLoader.send();
+      }
+
+
+      /*
+       * ---- Event Handlers ----
+       */
+
+      private function onMouseOut(event:DataMouseEvent):void {
+        infoLabel.text = "";
+      }
+
+
+      private function onMouseOver(event:DataMouseEvent):void {
+        const tgtNode:NodeSprite = event.sender as NodeSprite;
+        if (tgtNode) {
+          const d:Object = tgtNode.data;
+          infoLabel.text = d[model.labelPropertyName]
+                         + ": $"
+                         + moneyFormatter.format(d[model.sizePropertyName])
+                         + " ("
+                         + d[model.colorPropertyName] * 100.0
+                         + "%)";
+        }
+      }
+
+
+      private function onSizePropertySelected(event:ItemClickEvent):void {
+        model.sizePropertyName = (event.currentTarget as RadioButtonGroup).selectedValue.toString();
+        treemap.transitionPeriod = 1.0; // Animate the property change for 1s.
+      }
+
+
+      private function onEnterDataRange():void {
+        const min:Number = Number(rangeMin.text);
+        const max:Number = Number(rangeMax.text);
+
+        // Apply the range change to the tree map.
+        if (isNaN(min) || isNaN(max)) {
+          treemap.unsetColorScaleRange();
+        }
+        else {
+          treemap.setColorScaleRange(min / 100, max / 100);
+        }
+
+        // Reflect the range change in the legend.
+        treeMapLegend.leftText = rangeMin.text;
+        treeMapLegend.rightText = rangeMax.text;
+      }
+
+
+      private function onColorPicked(event:ColorPickerEvent):void {
+        const value:uint = event.color;
+        // Determine which picker was used.
+        const propName:String = (event.target === minColorPicker) ? "minEncodedColor" : "maxEncodedColor";
+
+        treemap.transitionPeriod = 0.5;     // Animate the color change for 500ms.
+        treemap.setStyle(propName, value);  // Apply the change to the tree map.
+
+        // Reflect the color change in the legend.
+        treeMapLegend.drawGradient( treemap.getStyle("minEncodedColor")
+                                  , treemap.getStyle("midEncodedColor")
+                                  , treemap.getStyle("maxEncodedColor"));
+      }
+
+
+      private function onLoadResult(event:ResultEvent):void {
+        function checkTreeML(treeml:XML):Boolean {
+          const tree:Tree = TreeMLReader.read(treeml);
+          return TreeMLReader.checkSizeValues(tree.root, Property.$("data.P"))
+            && TreeMLReader.checkSizeValues(tree.root, Property.$("data.Es"))
+            && TreeMLReader.checkSizeValues(tree.root, Property.$("data.S"))
+            && TreeMLReader.checkSizeValues(tree.root, Property.$("data.Em"))
+        }
+
+//        if (!checkTreeML(event.result as XML))
+//          trace("The TreeML file check failed.");
+
+        treemap.transitionPeriod = NaN;    // Turn off animation.
+        treemap.data = TreeMLReader.read(event.result as XML);
+      }
+
+    ]]>
+  </mx:Script>
+
+  <!-- *** Application Model *** -->
+  <local:AppModel id="model"
+    colorPropertyName="{model.sizePropertyName + '%'}"
+    labelPropertyName="name"
+    sizePropertyName="Em"
+  />
+
+  <!-- *** HTTP Data Loader *** -->
+  <mx:HTTPService id="dataLoader"
+    resultFormat="e4x"
+    result="onLoadResult(event)"
+  />
+
+  <mx:NumberFormatter id="moneyFormatter"
+    useThousandsSeparator="true"
+  />
+
+  <!-- *** Header ***  -->
+
+  <mx:Canvas id="header"
+    width="{treemap.width}" height="30"
+    styleName="header"
+  >
+    <mx:Label text="Economic Census Data by NAICS comparing 1997 to 2002"/>
+  </mx:Canvas>
+
+
+  <!-- *** Body *** -->
+
+  <controls:TreeMapZoomControl id="zoomCtrl"
+    width="{treemap.width}" height="50"
+    tree="{treemap}"
+    verticalScrollPolicy="off"
+  />
+
+  <controls:TreeMapControl id="treemap"
+    width="640" height="480"
+    colorEncodingField="{model.colorPropertyName}"
+    labelEncodingField="{model.labelPropertyName}"
+    sizeEncodingField="{model.sizePropertyName}"
+    minLabelDepth="1"
+    maxLabelDepth="1"
+    truncateToFit="true"
+    jkDataMouseOut="onMouseOut(event)"
+    jkDataMouseOver="onMouseOver(event)"
+  />
+
+  <mx:Label id="infoLabel"
+    width="{treemap.width}" height="20"
+    styleName="infoLabel"
+  />
+
+
+  <!-- *** Footer *** -->
+
+  <mx:Label
+    text="Settings"
+    styleName="subTitle"
+  />
+
+  <mx:VBox id="footer"
+    width="{treemap.width}" height="70"
+    styleName="footer"
+  >
+
+    <mx:HBox
+      styleName="controlBox"
+    >
+      <mx:Label
+        text="SIZE ($1000 in 2002)"
+        styleName="controlLabel"
+      />
+
+      <mx:RadioButtonGroup id="sizePropertyRBG"
+        selectedValue="Es"
+        itemClick="onSizePropertySelected(event)"
+      />
+
+      <mx:RadioButton
+        label="Establishments"
+        value="Es"
+        groupName="sizePropertyRBG"
+        styleName="textControl"
+      />
+
+      <mx:RadioButton
+        label="Sales"
+        value="S"
+        groupName="sizePropertyRBG"
+        styleName="textControl"
+      />
+
+      <mx:RadioButton
+        label="Employees"
+        value="Em"
+        groupName="sizePropertyRBG"
+        styleName="textControl"
+      />
+
+      <mx:RadioButton
+        label="Payroll"
+        value="P"
+        groupName="sizePropertyRBG"
+        styleName="textControl"
+      />
+    </mx:HBox>
+
+    <mx:HBox
+      styleName="controlBox"
+    >
+      <mx:Label
+        text="COLOR (% change)"
+        styleName="controlLabel"
+      />
+
+      <mx:TextInput id="rangeMin"
+        text="-50"
+        width="40"
+        styleName="textControl"
+        enter="onEnterDataRange()"
+      />
+
+      <mx:ColorPicker id="minColorPicker"
+        change="onColorPicked(event)"
+      />
+
+      <renderers:HLabeledGradient3 id="treeMapLegend"
+        width="200"
+        labelWidth="0"
+      />
+
+      <mx:ColorPicker id="maxColorPicker"
+        change="onColorPicked(event)"
+      />
+
+      <mx:TextInput id="rangeMax"
+        text="50"
+        width="40"
+        styleName="textControl"
+        enter="onEnterDataRange()"
+      />
+    </mx:HBox>
+  </mx:VBox>
+
+</mx:Application>

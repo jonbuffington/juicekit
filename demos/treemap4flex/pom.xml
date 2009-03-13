@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.juicekit.demos</groupId>
+    <artifactId>demos</artifactId>
+    <version>1.2.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>treemap4flex</artifactId>
+  <name>JuiceKit TreeMap Flex demo</name>
+  <packaging>swf</packaging>
+
+  <build>
+    <sourceDirectory>src/main/flex</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>info.flex-mojos</groupId>
+        <artifactId>flex-compiler-mojo</artifactId>
+      </plugin>
+
+      <!--
+        Add support for Flex Builder's run/debug environment until the
+        Maven Integration for Eclipse (m2eclipse) supports SWC
+        dependencies.
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-swc-resources</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>libs</outputDirectory>
+              <excludeTransitive>true</excludeTransitive>
+              <includeTypes>swc</includeTypes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

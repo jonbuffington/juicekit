@@ -102,7 +102,7 @@ package org.juicekit.visual.controls {
   [Style(name="encodedColorAlpha", type="Number", inherit="no")]
 
   /**
-   * Determines the fill color for rectangle's near the minimum of a
+   * Determines the fill color for rectangles near the minimum of a
    * range of data values.
    *
    * @default 0xFF0000
@@ -110,7 +110,7 @@ package org.juicekit.visual.controls {
   [Style(name="minEncodedColor", type="uint", format="Color", inherit="no")]
 
   /**
-   * Determines the fill color for rectangle's near the middle of a
+   * Determines the fill color for rectangles near the middle of a
    * range of data values.
    *
    * @default 0x000000
@@ -118,7 +118,7 @@ package org.juicekit.visual.controls {
   [Style(name="midEncodedColor", type="uint", format="Color", inherit="no")]
 
   /**
-   * Determines the fill color for rectangle's near the maximum of a
+   * Determines the fill color for rectangles near the maximum of a
    * range of data values.
    *
    * @default 0x00FF00

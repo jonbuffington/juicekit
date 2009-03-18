@@ -201,8 +201,8 @@
   </ciManagement>
 
   <issueManagement>
-    <system>Lighthouse</system>
-    <url>http://juicekit.lighthouseapp.com:80/projects/26065-juicekit/overview/</url>
+    <system>JIRA</system>
+    <url>http://www.juicekit.org/jira/</url>
   </issueManagement>
 
   <mailingLists>

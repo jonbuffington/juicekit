@@ -14,3 +14,62 @@
  * limitations under the License.
  */
 
+/* Basic Juice website styling */
+body {
+    font-family: Georgia, serif;
+    line-height: 1.1;
+    color: #333;
+}
+p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+ul li {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+ol li {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    border: 0px solid white;
+    color: #009900;
+    font-weight: bold;
+    padding: 0;
+}
+#contentBox {
+    width: 800px;
+}
+#bannerLeft {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#banner {
+    padding: 10px;
+}
+#breadcrumbs {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url(http://www.juiceanalytics.com/adminmedia/img/admin/nav-bg-reverse.gif);
+    font-size: 1.0em;
+    color: #666;
+}
+#leftColumn {
+    border: 0px solid white;
+    background-color: transparent;
+}
+#navcolumn h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 0px solid white;
+}
+#navcolumn ul li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}

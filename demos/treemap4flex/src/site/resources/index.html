@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      TreeMapControl Demonstration :: Economic Census Data Comparison of 1997 and 2002
+    </title>
+    <script type="text/javascript" src="assets/swfobject.js">
+</script>
+    <script type="text/javascript">
+  var flashvars = {};
+      var params = {};
+      params.menu = "false";
+      params.allowscriptaccess = "sameDomain";
+      var attributes = {};
+      attributes.id = "app";
+      attributes.name = "app";
+      swfobject.embedSWF("assets/treemap4flex.swf", "appWrapper", "690", "750", "9.0.124", false, flashvars, params, attributes);
+    </script>
+    <link media="screen" type="text/css" href="http://media.juiceanalytics.com/media/css/writing.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+#writing {
+      background-color: white;
+    }
+    #inner-writing {
+      margin: 0 auto;
+      width: 700px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="writing">
+      <div id="inner-writing">
+        <h1 style="margin-bottom: 0px;">
+          Economic Census Data
+        </h1>
+        <h3 style="margin-top: 0px;">
+          Comparison of 1997 and 2002
+        </h3>
+        <div id="app">
+          <div id="appWrapper">
+            <p class="info">
+              This application requires Adobe Flash Player release 9.0.124 or later.
+            </p>
+            <p>
+              <a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"></a>
+            </p>
+          </div>
+        </div>
+        <h3>
+          Reading a treemap
+        </h3>
+        <p>
+          Here are the three things you need to know to understand how to read a treemap:
+        </p>
+        <ol>
+          <li>
+            <p>
+              <strong>Treemaps show hierarchical data.</strong>
+            </p>
+            <p>
+              Treemaps are often used to show <a href="http://en.wikipedia.org/wiki/Hierarchical_model">hierarchical data</a> in which each "parent" can have many "children" but each "child" only has one "parent". A good example of this type of data is the biological classification of species, which starts with Kingdom at the highest level, followed by Phylum, Class, Order, Family, Genus, and finally Species. Most treemaps have fewer layers, like the SmartMoney <a href="http://www.smartmoney.com/map-of-the-market/">Map of the Market</a> which classifies publicly traded companies into industries, resulting in just two levels (i.e. industry, company).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Treemaps show two measures simultaneously using the size and color of boxes.</strong>
+            </p>
+            <p>
+              <em>Size</em> of the boxes represent a quantity measure where the individual box sizes must sum up to the category in which they exist. Think of a series of pie charts wherein all the slices of each pie chart must add up to the whole, precluding the use of growth rates or dates or any other data that doesn't aggregate.
+            </p>
+            <p>
+              <em>Color</em> in a treemap is used to show a range of values distinct from the size measure. Color is better suited to a measure of performance or change such as growth over time, average conversion rate, or customer satisfaction. Not only does color give an indication of a measure for an individual item in the treemap, the collective heatmap effect conveys a broader understanding the full data set.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Treemaps use interactive features for exploration.</strong>
+            </p>
+            <p>
+              Showing all the data at once in a treemap would overwhelm users and undermine the value of the visualization. To reveal data gradually as the user expresses interest, most treemaps offer interactive features including: 1) selectors to let the user decide what the size and color should represent; 2) zooming to allow the user to drill-in to layers, simultaneously narrowing the scope the data and revealing deeper layers; 3) detailed data about an individual branch or leaf presented as a tooltip or area outside the treemap; 4) highlighting of specified items based on a user search or selection.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Given their ability to show a comprehensive view of a system in an structured fashion, treemaps can be very instructive. The easiest thing to pick out are the items that are both big (by size of the box) and bad (by color intensity). For example, if you have a treemap of financial costs for your organization, the big, red colored boxes are going to be the costs that are worth your attention and changing significantly.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

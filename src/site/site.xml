@@ -47,4 +47,9 @@
       </script>
     </head>
   </body>
+  <skin>
+    <groupId>org.juicekit.skins</groupId>
+    <artifactId>juice-maven-skin</artifactId>
+    <version>0.0.1</version>
+  </skin>
 </project>

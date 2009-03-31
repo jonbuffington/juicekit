@@ -20,7 +20,7 @@
 
   <licenses>
     <license>
-      <name>the Apache License, ASL Version 2.0</name>
+      <name>The Apache License, ASL Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0</url>
       <distribution>repo</distribution>
     </license>
@@ -214,4 +214,17 @@
       <archive>http://groups.google.com/group/juicekit</archive>
     </mailingList>
   </mailingLists>
+
+  <developers>
+    <developer>
+      <id>jon.buffington</id>
+      <name>Jon Buffington</name>
+      <email>jon.buffington [at] juiceanalytics.com</email>
+    </developer>
+    <developer>
+      <id>chris.gemignani</id>
+      <name>Chris Gemignani</name>
+      <email>chris.gemignani [at] juiceanalytics.com</email>
+    </developer>
+  </developers>
 </project>

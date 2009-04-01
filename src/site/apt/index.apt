@@ -27,9 +27,9 @@ Examples
 
   The JuiceKit SDK has been used to build many information visualizations and customer applications. Here are a few simple examples:
 
-  *  {{{http://demos.juiceanalytics.com/juicekit/}JuiceKit Demo Application}} - A simple demo application that shows a number of the types of visualizations that are pretty easily constructed using the SDK.
-
   *  {{{http://recoveryact.juiceanalytics.com/treemap/}Federal Recovery Act Treemap}} - This is an application of the JuiceKit SDK Treemap visualization to better understand the components of the American Recovery and Reinvestment Act of 2009.
+
+  *  {{{http://www.juicekit.org/demos/treemap4flex/}Economic Census Data Treemap}} - Every 5 years the NAICS takes an economic census. We've used this data to demonstrate using the JuiceKit to implement the treemap with additional controls to change some of the display parameters.
 
   []
   For other examples of implementations of the JuiceKit for customers, take a look at this {{{http://www.juiceanalytics.com/writing/announcing-juicekit-sdk-open-source/}recent article}}.

@@ -1,4 +1,5 @@
 *~
+*.swc
 *.swf
 .DS_Store
 .settings/

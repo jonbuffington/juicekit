@@ -36,10 +36,11 @@
 
   <build>
     <sourceDirectory>src/main/flex</sourceDirectory>
+    <testSourceDirectory>src/test/flex</testSourceDirectory>
     <plugins>
       <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>flex-compiler-mojo</artifactId>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
         <configuration>
           <includeClasses>
             <classEntry>
@@ -185,8 +186,9 @@
   <reporting>
     <plugins>
       <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>asdoc-mojo</artifactId>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
+        <version>${flexmojos.version}</version>
         <configuration>
           <docSources>
             <docSource>

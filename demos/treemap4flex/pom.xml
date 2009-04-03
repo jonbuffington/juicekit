@@ -11,12 +11,7 @@
   <packaging>swf</packaging>
 
   <build>
-    <sourceDirectory>src/main/flex</sourceDirectory>
     <plugins>
-      <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>flex-compiler-mojo</artifactId>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>

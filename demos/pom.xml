@@ -17,10 +17,11 @@
 
   <build>
     <sourceDirectory>src/main/flex</sourceDirectory>
+    <testSourceDirectory>src/test/flex</testSourceDirectory>
     <plugins>
       <plugin>
-        <groupId>info.flex-mojos</groupId>
-        <artifactId>flex-compiler-mojo</artifactId>
+	      <groupId>org.sonatype.flexmojos</groupId>
+	      <artifactId>flexmojos-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

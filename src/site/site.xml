@@ -16,10 +16,7 @@
     </links>
 
     <menu name="${project.name}">
-      <item name="Introduction" href="index.html"/>
-      <item name="Getting Started" href="start.html"/>
-      <item name="Download" href="download.html"/>
-      <item name="Documentation" href="documentation.html"/>
+      <item name="Overview" href="index.html"/>
       <item name="Mailing Lists" href="mail-lists.html"/>
       <item name="Issue Tracking" href="issue-tracking.html"/>
       <item name="Continuous Integration" href="integration.html"/>
@@ -50,6 +47,6 @@
   <skin>
     <groupId>org.juicekit.skins</groupId>
     <artifactId>juice-maven-skin</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
   </skin>
 </project>

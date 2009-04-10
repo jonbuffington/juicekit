@@ -7,7 +7,7 @@
     <version>1.2.0-SNAPSHOT</version>
   </parent>
   <artifactId>flexlib</artifactId>
-  <name>JuiceKit library for Adobe Flash/Flex</name>
+  <name>JuiceKit Flex Library</name>
   <packaging>swc</packaging>
 
   <dependencies>

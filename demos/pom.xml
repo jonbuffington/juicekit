@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.juicekit.demos</groupId>
   <artifactId>demos</artifactId>
-  <name>JuiceKit Demonstrations</name>
+  <name>Demonstrations</name>
   <packaging>pom</packaging>
 
   <modules>

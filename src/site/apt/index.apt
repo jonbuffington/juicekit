@@ -23,6 +23,9 @@ Overview
 
 [images/example.png] JuiceKit example application
 
+  You can get started immediately using and contributing to the project
+  following {{{start.html}these quick start instructions.}}
+
 Examples
 
   The JuiceKit SDK has been used to build many information visualizations and customer applications. Here are a few simple examples:
@@ -33,6 +36,25 @@ Examples
 
   []
   For other examples of implementations of the JuiceKit for customers, take a look at this {{{http://www.juiceanalytics.com/writing/announcing-juicekit-sdk-open-source/}recent article}}.
+
+Download
+
+  We will have packaged distributions available soon. In the meantime, you
+  have two ways to use the project:
+
+  * Download the latest build from the {{{integration.html}continuous integration server}}.
+
+  * Build the library and documentation from the {{{source-repository.html}source}} following the {{{start.html}Getting Started}} instructions.
+
+Documentation
+
+  Currently, only Application Programming Interface (API)
+  documentation for developers is available. We plan to add best practices
+  and tutorial documents soon.
+
+  * {{{flare/asdoc/index.html}Flare API Documentation}}
+
+  * {{{flexlib/asdoc/index.html}Flexlib API Documentation}}
 
 Requirements
 
@@ -60,18 +82,3 @@ Contribute
 
   *  Finally, if you make changes to the code and want to submit them for review and possible inclusion into the code base, you can do that on {{{http://github.com/jonbuffington/juicekit/tree/master}Github}}.
 
-Coming Soon
-
-  We are continually looking for additional enhancements to add to the JuiceKit roadmap. Here are a few items that we are planning on adding in the near future:
-
-  * Word Cloud Renderer
-
-  * Word Tree Control
-
-  * Consistent out-of-the-box styling for all visualizations
-
-  * JavaScriptLib
-
-  []
-
-  If there are other enhancements you'd like to see, you can make requests using our JuiceKit {{{issue-tracking.html}issue tracker}}.

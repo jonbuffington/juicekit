@@ -109,9 +109,7 @@ package org.juicekit.visual.renderers {
 
         // only render data if available
         if ((data !== null) && (!isNaN(numberValue))) {
-          const xposUnbounded:Number = left +
-                                       (width * Math.min(numberValue, 200.0))
-                          / 100.0;
+          const xposUnbounded:Number = left + Math.min(numberValue, 200.0)*(width / 200.0);
           const xpos:Number = Math.max(xposUnbounded, radius + 1);
           if (xpos < width) {
             g.beginFill(color, this.alpha);

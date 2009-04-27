@@ -29,7 +29,7 @@
    creationComplete="init()"
    >
 
-   <mx:Style source="../resources/skin.css"/>
+   <mx:Style source="skin.css"/>
 
   <mx:Script>
     <![CDATA[

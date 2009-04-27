@@ -6,7 +6,7 @@
     <artifactId>demos</artifactId>
     <version>1.2.0-SNAPSHOT</version>
   </parent>
-  <artifactId>treemap4flex</artifactId>
+  <artifactId>usmap4flex</artifactId>
   <name>Economic Census TreeMap</name>
   <packaging>swf</packaging>
   <build>

@@ -23,6 +23,8 @@
 package org.juicekit.visual.renderers {
 
   import flash.display.Graphics;
+  
+  import org.juicekit.util.helper.CSSUtil;
 
   //--------------------------------------
   //  Styles
@@ -45,6 +47,21 @@ package org.juicekit.visual.renderers {
    * @author Chris Gemignani
    */
   public class IndexCircleRenderer extends NumberRendererBase {
+
+
+    // Invoke the class constructor to initialize the CSS defaults.
+    classConstructor();
+
+    private static function classConstructor():void {
+      CSSUtil.setDefaultsFor("IndexCircleRenderer",
+        { color: 0x000000
+        , paddingLeft: 0
+        , paddingRight: 0
+        , paddingTop: 0
+        , paddingBottom: 0
+        }
+      );
+    }
 
 
     private const radius:Number = 3;
@@ -79,9 +96,9 @@ package org.juicekit.visual.renderers {
 
       // adjust for padding/inset
       const paddingLeft:Number = getStyle("paddingLeft");
-          const paddingTop:Number = getStyle("paddingTop");
-          const paddingRight:Number = getStyle("paddingRight");
-          const paddingBottom:Number = getStyle("paddingBottom");
+      const paddingTop:Number = getStyle("paddingTop");
+      const paddingRight:Number = getStyle("paddingRight");
+      const paddingBottom:Number = getStyle("paddingBottom");
 
       const left:Number = paddingLeft;
       const top:Number = paddingTop;
@@ -95,12 +112,12 @@ package org.juicekit.visual.renderers {
         const color:Number = getStyle("color");
 
         // obtain the graphics context
-         const g:Graphics = this.graphics;
+        const g:Graphics = this.graphics;
+        g.clear();
 
         // always draw the dividing line
-         g.clear();
-         g.beginFill(color, this.alpha);
-        g.lineStyle(0.1, color);
+        g.beginFill(color, this.alpha);
+        g.lineStyle(1, color);
         const halfHeight:Number = height / 2 + top;
         const halfWidth:Number = width / 2 + left;
         g.moveTo(halfWidth, top);

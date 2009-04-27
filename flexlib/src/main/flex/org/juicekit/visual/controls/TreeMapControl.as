@@ -223,9 +223,10 @@ package org.juicekit.visual.controls {
 
 
     /**
-     * Return a color palette using the style properties.
+     * Return a color palette for interpolating color values
+     * from the <code>colorEncodingField</code>'s data value.
      */
-    private function get colorPalette():ColorPalette {
+    protected function get colorPalette():ColorPalette {
       const alphaBits:uint = numToAlphaBits(getStyle("encodedColorAlpha"));
       const minColor:uint = getStyle("minEncodedColor") | alphaBits;
       const midColor:uint = getStyle("midEncodedColor") | alphaBits;

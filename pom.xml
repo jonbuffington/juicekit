@@ -222,12 +222,25 @@
       <organization>Juice, Inc.</organization>
       <organizationUrl>http://www.juiceanalytics.com</organizationUrl>
     </developer>
+    <developer>
+      <id>shalini.kataria</id>
+      <name>Shalini Kataria</name>
+      <email>shalini.kataria [at] juiceanalytics.com</email>
+      <organization>Juice, Inc.</organization>
+      <organizationUrl>http://www.juiceanalytics.com</organizationUrl>
+    </developer>
   </developers>
 
   <contributors>
     <contributor>
       <name>Ken Hilburn</name>
       <email>ken.hilburn [at] juiceanalytics.com</email>
+      <organization>Juice, Inc.</organization>
+      <organizationUrl>http://www.juiceanalytics.com</organizationUrl>
+    </contributor>
+    <contributor>
+      <name>Zach Gemignani</name>
+      <email>zach.gemignani [at] juiceanalytics.com</email>
       <organization>Juice, Inc.</organization>
       <organizationUrl>http://www.juiceanalytics.com</organizationUrl>
     </contributor>

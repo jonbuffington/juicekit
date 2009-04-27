@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <year name="1999" natAvg="4.3">
+    <state abbr="AL" name="Alabama" rate="4.3" />
+    <state abbr="AK" name="Alaska" rate="6.2" />
+    <state abbr="AZ" name="Arizona" rate="4.5" />
+    <state abbr="AR" name="Arkansas" rate="4.4" />
+    <state abbr="CA" name="California" rate="5.3" />
+    <state abbr="CO" name="Colorado" rate="3" />
+    <state abbr="CT" name="Connecticut" rate="2.7" />
+    <state abbr="DE" name="Delaware" rate="3.3" />
+    <state abbr="DC" name="District Of Columbia" rate="6.5" />
+    <state abbr="FL" name="Florida" rate="4" />
+    <state abbr="GA" name="Georgia" rate="3.8" />
+    <state abbr="HI" name="Hawaii" rate="5" />
+    <state abbr="ID" name="Idaho" rate="4.9" />
+    <state abbr="IL" name="Illinois" rate="4.5" />
+    <state abbr="IN" name="Indiana" rate="2.9" />
+    <state abbr="IA" name="Iowa" rate="2.6" />
+    <state abbr="KS" name="Kansas" rate="3.5" />
+    <state abbr="KY" name="Kentucky" rate="4.6" />
+    <state abbr="LA" name="Louisiana" rate="4.7" />
+    <state abbr="ME" name="Maine" rate="3.9" />
+    <state abbr="MD" name="Maryland" rate="3.6" />
+    <state abbr="MA" name="Massachusetts" rate="3.3" />
+    <state abbr="MI" name="Michigan" rate="3.8" />
+    <state abbr="MN" name="Minnesota" rate="2.8" />
+    <state abbr="MS" name="Mississippi" rate="5.3" />
+    <state abbr="MO" name="Missouri" rate="3.1" />
+    <state abbr="MT" name="Montana" rate="5.3" />
+    <state abbr="NE" name="Nebraska" rate="2.8" />
+    <state abbr="NV" name="Nevada" rate="4.3" />
+    <state abbr="NH" name="New Hampshire" rate="2.8" />
+    <state abbr="NJ" name="New Jersey" rate="4.5" />
+    <state abbr="NM" name="New Mexico" rate="5.6" />
+    <state abbr="NY" name="New York" rate="5.2" />
+    <state abbr="NC" name="North Carolina" rate="3.3" />
+    <state abbr="ND" name="North Dakota" rate="3.2" />
+    <state abbr="OH" name="Ohio" rate="4.3" />
+    <state abbr="OK" name="Oklahoma" rate="3.6" />
+    <state abbr="OR" name="Oregon" rate="5.5" />
+    <state abbr="PA" name="Pennsylvania" rate="4.4" />
+    <state abbr="PR" name="Puerto Rico" rate="11.7" />
+    <state abbr="RI" name="Rhode Island" rate="4.2" />
+    <state abbr="SC" name="South Carolina" rate="4.1" />
+    <state abbr="SD" name="South Dakota" rate="2.8" />
+    <state abbr="TN" name="Tennessee" rate="4.1" />
+    <state abbr="TX" name="Texas" rate="4.7" />
+    <state abbr="UT" name="Utah" rate="3.6" />
+    <state abbr="VT" name="Vermont" rate="2.9" />
+    <state abbr="VA" name="Virginia" rate="2.7" />
+    <state abbr="WA" name="Washington" rate="4.8" />
+    <state abbr="WV" name="West Virginia" rate="6.3" />
+    <state abbr="WI" name="Wisconsin" rate="3.1" />
+    <state abbr="WY" name="Wyoming" rate="4.9" />
+  </year>
+  <year name="2000" natAvg="4">
+    <state abbr="AL" name="Alabama" rate="4.1" />
+    <state abbr="AK" name="Alaska" rate="6.2" />
+    <state abbr="AZ" name="Arizona" rate="4" />
+    <state abbr="AR" name="Arkansas" rate="4.2" />
+    <state abbr="CA" name="California" rate="4.9" />
+    <state abbr="CO" name="Colorado" rate="2.7" />
+    <state abbr="CT" name="Connecticut" rate="2.3" />
+    <state abbr="DE" name="Delaware" rate="3.3" />
+    <state abbr="DC" name="District Of Columbia" rate="5.7" />
+    <state abbr="FL" name="Florida" rate="3.8" />
+    <state abbr="GA" name="Georgia" rate="3.5" />
+    <state abbr="HI" name="Hawaii" rate="4" />
+    <state abbr="ID" name="Idaho" rate="4.6" />
+    <state abbr="IL" name="Illinois" rate="4.5" />
+    <state abbr="IN" name="Indiana" rate="2.9" />
+    <state abbr="IA" name="Iowa" rate="2.8" />
+    <state abbr="KS" name="Kansas" rate="3.8" />
+    <state abbr="KY" name="Kentucky" rate="4.2" />
+    <state abbr="LA" name="Louisiana" rate="5" />
+    <state abbr="ME" name="Maine" rate="3.3" />
+    <state abbr="MD" name="Maryland" rate="3.6" />
+    <state abbr="MA" name="Massachusetts" rate="2.7" />
+    <state abbr="MI" name="Michigan" rate="3.7" />
+    <state abbr="MN" name="Minnesota" rate="3.1" />
+    <state abbr="MS" name="Mississippi" rate="5.7" />
+    <state abbr="MO" name="Missouri" rate="3.3" />
+    <state abbr="MT" name="Montana" rate="4.8" />
+    <state abbr="NE" name="Nebraska" rate="2.8" />
+    <state abbr="NV" name="Nevada" rate="4.5" />
+    <state abbr="NH" name="New Hampshire" rate="2.7" />
+    <state abbr="NJ" name="New Jersey" rate="3.7" />
+    <state abbr="NM" name="New Mexico" rate="5" />
+    <state abbr="NY" name="New York" rate="4.5" />
+    <state abbr="NC" name="North Carolina" rate="3.7" />
+    <state abbr="ND" name="North Dakota" rate="2.9" />
+    <state abbr="OH" name="Ohio" rate="4" />
+    <state abbr="OK" name="Oklahoma" rate="3.1" />
+    <state abbr="OR" name="Oregon" rate="5.1" />
+    <state abbr="PA" name="Pennsylvania" rate="4.2" />
+    <state abbr="PR" name="Puerto Rico" rate="10.1" />
+    <state abbr="RI" name="Rhode Island" rate="4.2" />
+    <state abbr="SC" name="South Carolina" rate="3.6" />
+    <state abbr="SD" name="South Dakota" rate="2.7" />
+    <state abbr="TN" name="Tennessee" rate="4" />
+    <state abbr="TX" name="Texas" rate="4.4" />
+    <state abbr="UT" name="Utah" rate="3.4" />
+    <state abbr="VT" name="Vermont" rate="2.7" />
+    <state abbr="VA" name="Virginia" rate="2.3" />
+    <state abbr="WA" name="Washington" rate="5" />
+    <state abbr="WV" name="West Virginia" rate="5.5" />
+    <state abbr="WI" name="Wisconsin" rate="3.4" />
+    <state abbr="WY" name="Wyoming" rate="3.8" />
+  </year>
+  <year name="2001" natAvg="4.6">
+    <state abbr="AL" name="Alabama" rate="4.7" />
+    <state abbr="AK" name="Alaska" rate="6.2" />
+    <state abbr="AZ" name="Arizona" rate="4.7" />
+    <state abbr="AR" name="Arkansas" rate="4.7" />
+    <state abbr="CA" name="California" rate="5.4" />
+    <state abbr="CO" name="Colorado" rate="3.8" />
+    <state abbr="CT" name="Connecticut" rate="3.1" />
+    <state abbr="DE" name="Delaware" rate="3.5" />
+    <state abbr="DC" name="District Of Columbia" rate="6.3" />
+    <state abbr="FL" name="Florida" rate="4.7" />
+    <state abbr="GA" name="Georgia" rate="4" />
+    <state abbr="HI" name="Hawaii" rate="4.2" />
+    <state abbr="ID" name="Idaho" rate="4.9" />
+    <state abbr="IL" name="Illinois" rate="5.4" />
+    <state abbr="IN" name="Indiana" rate="4.2" />
+    <state abbr="IA" name="Iowa" rate="3.3" />
+    <state abbr="KS" name="Kansas" rate="4.3" />
+    <state abbr="KY" name="Kentucky" rate="5.2" />
+    <state abbr="LA" name="Louisiana" rate="5.4" />
+    <state abbr="ME" name="Maine" rate="3.7" />
+    <state abbr="MD" name="Maryland" rate="4.1" />
+    <state abbr="MA" name="Massachusetts" rate="3.7" />
+    <state abbr="MI" name="Michigan" rate="5.2" />
+    <state abbr="MN" name="Minnesota" rate="3.8" />
+    <state abbr="MS" name="Mississippi" rate="5.6" />
+    <state abbr="MO" name="Missouri" rate="4.5" />
+    <state abbr="MT" name="Montana" rate="4.5" />
+    <state abbr="NE" name="Nebraska" rate="3.1" />
+    <state abbr="NV" name="Nevada" rate="5.3" />
+    <state abbr="NH" name="New Hampshire" rate="3.4" />
+    <state abbr="NJ" name="New Jersey" rate="4.3" />
+    <state abbr="NM" name="New Mexico" rate="4.9" />
+    <state abbr="NY" name="New York" rate="4.9" />
+    <state abbr="NC" name="North Carolina" rate="5.6" />
+    <state abbr="ND" name="North Dakota" rate="2.8" />
+    <state abbr="OH" name="Ohio" rate="4.4" />
+    <state abbr="OK" name="Oklahoma" rate="3.7" />
+    <state abbr="OR" name="Oregon" rate="6.4" />
+    <state abbr="PA" name="Pennsylvania" rate="4.8" />
+    <state abbr="PR" name="Puerto Rico" rate="11.4" />
+    <state abbr="RI" name="Rhode Island" rate="4.5" />
+    <state abbr="SC" name="South Carolina" rate="5.2" />
+    <state abbr="SD" name="South Dakota" rate="3.1" />
+    <state abbr="TN" name="Tennessee" rate="4.7" />
+    <state abbr="TX" name="Texas" rate="5" />
+    <state abbr="UT" name="Utah" rate="4.4" />
+    <state abbr="VT" name="Vermont" rate="3.3" />
+    <state abbr="VA" name="Virginia" rate="3.2" />
+    <state abbr="WA" name="Washington" rate="6.2" />
+    <state abbr="WV" name="West Virginia" rate="5.2" />
+    <state abbr="WI" name="Wisconsin" rate="4.4" />
+    <state abbr="WY" name="Wyoming" rate="3.9" />
+  </year>
+  <year name="2002" natAvg="5.5">
+    <state abbr="AL" name="Alabama" rate="5.4" />
+    <state abbr="AK" name="Alaska" rate="7.1" />
+    <state abbr="AZ" name="Arizona" rate="6" />
+    <state abbr="AR" name="Arkansas" rate="5.3" />
+    <state abbr="CA" name="California" rate="6.7" />
+    <state abbr="CO" name="Colorado" rate="5.7" />
+    <state abbr="CT" name="Connecticut" rate="4.4" />
+    <state abbr="DE" name="Delaware" rate="4" />
+    <state abbr="DC" name="District Of Columbia" rate="6.7" />
+    <state abbr="FL" name="Florida" rate="5.7" />
+    <state abbr="GA" name="Georgia" rate="4.8" />
+    <state abbr="HI" name="Hawaii" rate="4" />
+    <state abbr="ID" name="Idaho" rate="5.4" />
+    <state abbr="IL" name="Illinois" rate="6.5" />
+    <state abbr="IN" name="Indiana" rate="5.2" />
+    <state abbr="IA" name="Iowa" rate="3.9" />
+    <state abbr="KS" name="Kansas" rate="5.1" />
+    <state abbr="KY" name="Kentucky" rate="5.7" />
+    <state abbr="LA" name="Louisiana" rate="5.9" />
+    <state abbr="ME" name="Maine" rate="4.4" />
+    <state abbr="MD" name="Maryland" rate="4.5" />
+    <state abbr="MA" name="Massachusetts" rate="5.3" />
+    <state abbr="MI" name="Michigan" rate="6.2" />
+    <state abbr="MN" name="Minnesota" rate="4.5" />
+    <state abbr="MS" name="Mississippi" rate="6.7" />
+    <state abbr="MO" name="Missouri" rate="5.2" />
+    <state abbr="MT" name="Montana" rate="4.5" />
+    <state abbr="NE" name="Nebraska" rate="3.7" />
+    <state abbr="NV" name="Nevada" rate="5.7" />
+    <state abbr="NH" name="New Hampshire" rate="4.5" />
+    <state abbr="NJ" name="New Jersey" rate="5.8" />
+    <state abbr="NM" name="New Mexico" rate="5.5" />
+    <state abbr="NY" name="New York" rate="6.2" />
+    <state abbr="NC" name="North Carolina" rate="6.6" />
+    <state abbr="ND" name="North Dakota" rate="3.5" />
+    <state abbr="OH" name="Ohio" rate="5.7" />
+    <state abbr="OK" name="Oklahoma" rate="4.8" />
+    <state abbr="OR" name="Oregon" rate="7.6" />
+    <state abbr="PA" name="Pennsylvania" rate="5.6" />
+    <state abbr="PR" name="Puerto Rico" rate="12.3" />
+    <state abbr="RI" name="Rhode Island" rate="5.1" />
+    <state abbr="SC" name="South Carolina" rate="6" />
+    <state abbr="SD" name="South Dakota" rate="3.3" />
+    <state abbr="TN" name="Tennessee" rate="5.3" />
+    <state abbr="TX" name="Texas" rate="6.4" />
+    <state abbr="UT" name="Utah" rate="5.8" />
+    <state abbr="VT" name="Vermont" rate="4" />
+    <state abbr="VA" name="Virginia" rate="4.2" />
+    <state abbr="WA" name="Washington" rate="7.3" />
+    <state abbr="WV" name="West Virginia" rate="5.9" />
+    <state abbr="WI" name="Wisconsin" rate="5.3" />
+    <state abbr="WY" name="Wyoming" rate="4.2" />
+  </year>
+  <year name="2003" natAvg="5.7">
+    <state abbr="AL" name="Alabama" rate="5.4" />
+    <state abbr="AK" name="Alaska" rate="7.7" />
+    <state abbr="AZ" name="Arizona" rate="5.7" />
+    <state abbr="AR" name="Arkansas" rate="5.8" />
+    <state abbr="CA" name="California" rate="6.8" />
+    <state abbr="CO" name="Colorado" rate="6.1" />
+    <state abbr="CT" name="Connecticut" rate="5.5" />
+    <state abbr="DE" name="Delaware" rate="4.2" />
+    <state abbr="DC" name="District Of Columbia" rate="7" />
+    <state abbr="FL" name="Florida" rate="5.3" />
+    <state abbr="GA" name="Georgia" rate="4.8" />
+    <state abbr="HI" name="Hawaii" rate="3.9" />
+    <state abbr="ID" name="Idaho" rate="5.2" />
+    <state abbr="IL" name="Illinois" rate="6.7" />
+    <state abbr="IN" name="Indiana" rate="5.3" />
+    <state abbr="IA" name="Iowa" rate="4.4" />
+    <state abbr="KS" name="Kansas" rate="5.6" />
+    <state abbr="KY" name="Kentucky" rate="6.3" />
+    <state abbr="LA" name="Louisiana" rate="6.2" />
+    <state abbr="ME" name="Maine" rate="5" />
+    <state abbr="MD" name="Maryland" rate="4.5" />
+    <state abbr="MA" name="Massachusetts" rate="5.8" />
+    <state abbr="MI" name="Michigan" rate="7.1" />
+    <state abbr="MN" name="Minnesota" rate="4.9" />
+    <state abbr="MS" name="Mississippi" rate="6.4" />
+    <state abbr="MO" name="Missouri" rate="5.6" />
+    <state abbr="MT" name="Montana" rate="4.3" />
+    <state abbr="NE" name="Nebraska" rate="4" />
+    <state abbr="NV" name="Nevada" rate="5.2" />
+    <state abbr="NH" name="New Hampshire" rate="4.5" />
+    <state abbr="NJ" name="New Jersey" rate="5.9" />
+    <state abbr="NM" name="New Mexico" rate="5.9" />
+    <state abbr="NY" name="New York" rate="6.4" />
+    <state abbr="NC" name="North Carolina" rate="6.5" />
+    <state abbr="ND" name="North Dakota" rate="3.6" />
+    <state abbr="OH" name="Ohio" rate="6.2" />
+    <state abbr="OK" name="Oklahoma" rate="5.6" />
+    <state abbr="OR" name="Oregon" rate="8.1" />
+    <state abbr="PA" name="Pennsylvania" rate="5.7" />
+    <state abbr="PR" name="Puerto Rico" rate="12" />
+    <state abbr="RI" name="Rhode Island" rate="5.4" />
+    <state abbr="SC" name="South Carolina" rate="6.7" />
+    <state abbr="SD" name="South Dakota" rate="3.5" />
+    <state abbr="TN" name="Tennessee" rate="5.7" />
+    <state abbr="TX" name="Texas" rate="6.7" />
+    <state abbr="UT" name="Utah" rate="5.7" />
+    <state abbr="VT" name="Vermont" rate="4.5" />
+    <state abbr="VA" name="Virginia" rate="4.1" />
+    <state abbr="WA" name="Washington" rate="7.4" />
+    <state abbr="WV" name="West Virginia" rate="6" />
+    <state abbr="WI" name="Wisconsin" rate="5.6" />
+    <state abbr="WY" name="Wyoming" rate="4.5" />
+  </year>
+  <year name="2004" natAvg="5.3">
+    <state abbr="AL" name="Alabama" rate="5" />
+    <state abbr="AK" name="Alaska" rate="7.4" />
+    <state abbr="AZ" name="Arizona" rate="5" />
+    <state abbr="AR" name="Arkansas" rate="5.6" />
+    <state abbr="CA" name="California" rate="6.2" />
+    <state abbr="CO" name="Colorado" rate="5.6" />
+    <state abbr="CT" name="Connecticut" rate="4.9" />
+    <state abbr="DE" name="Delaware" rate="3.9" />
+    <state abbr="DC" name="District Of Columbia" rate="7.5" />
+    <state abbr="FL" name="Florida" rate="4.7" />
+    <state abbr="GA" name="Georgia" rate="4.7" />
+    <state abbr="HI" name="Hawaii" rate="3.2" />
+    <state abbr="ID" name="Idaho" rate="4.6" />
+    <state abbr="IL" name="Illinois" rate="6.2" />
+    <state abbr="IN" name="Indiana" rate="5.3" />
+    <state abbr="IA" name="Iowa" rate="4.6" />
+    <state abbr="KS" name="Kansas" rate="5.5" />
+    <state abbr="KY" name="Kentucky" rate="5.6" />
+    <state abbr="LA" name="Louisiana" rate="5.5" />
+    <state abbr="ME" name="Maine" rate="4.6" />
+    <state abbr="MD" name="Maryland" rate="4.3" />
+    <state abbr="MA" name="Massachusetts" rate="5.2" />
+    <state abbr="MI" name="Michigan" rate="7.1" />
+    <state abbr="MN" name="Minnesota" rate="4.6" />
+    <state abbr="MS" name="Mississippi" rate="6.3" />
+    <state abbr="MO" name="Missouri" rate="5.8" />
+    <state abbr="MT" name="Montana" rate="4" />
+    <state abbr="NE" name="Nebraska" rate="3.9" />
+    <state abbr="NV" name="Nevada" rate="4.4" />
+    <state abbr="NH" name="New Hampshire" rate="3.9" />
+    <state abbr="NJ" name="New Jersey" rate="4.9" />
+    <state abbr="NM" name="New Mexico" rate="5.8" />
+    <state abbr="NY" name="New York" rate="5.8" />
+    <state abbr="NC" name="North Carolina" rate="5.5" />
+    <state abbr="ND" name="North Dakota" rate="3.5" />
+    <state abbr="OH" name="Ohio" rate="6.1" />
+    <state abbr="OK" name="Oklahoma" rate="5" />
+    <state abbr="OR" name="Oregon" rate="7.3" />
+    <state abbr="PA" name="Pennsylvania" rate="5.4" />
+    <state abbr="PR" name="Puerto Rico" rate="10.6" />
+    <state abbr="RI" name="Rhode Island" rate="5.2" />
+    <state abbr="SC" name="South Carolina" rate="6.8" />
+    <state abbr="SD" name="South Dakota" rate="3.7" />
+    <state abbr="TN" name="Tennessee" rate="5.4" />
+    <state abbr="TX" name="Texas" rate="6" />
+    <state abbr="UT" name="Utah" rate="5.1" />
+    <state abbr="VT" name="Vermont" rate="3.7" />
+    <state abbr="VA" name="Virginia" rate="3.7" />
+    <state abbr="WA" name="Washington" rate="6.2" />
+    <state abbr="WV" name="West Virginia" rate="5.3" />
+    <state abbr="WI" name="Wisconsin" rate="5" />
+    <state abbr="WY" name="Wyoming" rate="3.9" />
+  </year>
+  <year name="2005" natAvg="5.0">
+    <state abbr="AL" name="Alabama" rate="3.8" />
+    <state abbr="AK" name="Alaska" rate="6.9" />
+    <state abbr="AZ" name="Arizona" rate="4.6" />
+    <state abbr="AR" name="Arkansas" rate="5.1" />
+    <state abbr="CA" name="California" rate="5.4" />
+    <state abbr="CO" name="Colorado" rate="5.1" />
+    <state abbr="CT" name="Connecticut" rate="4.9" />
+    <state abbr="DE" name="Delaware" rate="4" />
+    <state abbr="DC" name="District Of Columbia" rate="6.5" />
+    <state abbr="FL" name="Florida" rate="3.8" />
+    <state abbr="GA" name="Georgia" rate="5.2" />
+    <state abbr="HI" name="Hawaii" rate="2.7" />
+    <state abbr="ID" name="Idaho" rate="3.7" />
+    <state abbr="IL" name="Illinois" rate="5.8" />
+    <state abbr="IN" name="Indiana" rate="5.4" />
+    <state abbr="IA" name="Iowa" rate="4.3" />
+    <state abbr="KS" name="Kansas" rate="5.1" />
+    <state abbr="KY" name="Kentucky" rate="6.1" />
+    <state abbr="LA" name="Louisiana" rate="6.7" />
+    <state abbr="ME" name="Maine" rate="4.9" />
+    <state abbr="MD" name="Maryland" rate="4.1" />
+    <state abbr="MA" name="Massachusetts" rate="4.8" />
+    <state abbr="MI" name="Michigan" rate="6.8" />
+    <state abbr="MN" name="Minnesota" rate="4.2" />
+    <state abbr="MS" name="Mississippi" rate="7.8" />
+    <state abbr="MO" name="Missouri" rate="5.4" />
+    <state abbr="MT" name="Montana" rate="3.7" />
+    <state abbr="NE" name="Nebraska" rate="3.9" />
+    <state abbr="NV" name="Nevada" rate="4.5" />
+    <state abbr="NH" name="New Hampshire" rate="3.6" />
+    <state abbr="NJ" name="New Jersey" rate="4.5" />
+    <state abbr="NM" name="New Mexico" rate="5.2" />
+    <state abbr="NY" name="New York" rate="5" />
+    <state abbr="NC" name="North Carolina" rate="5.3" />
+    <state abbr="ND" name="North Dakota" rate="3.4" />
+    <state abbr="OH" name="Ohio" rate="5.9" />
+    <state abbr="OK" name="Oklahoma" rate="4.5" />
+    <state abbr="OR" name="Oregon" rate="6.2" />
+    <state abbr="PA" name="Pennsylvania" rate="5" />
+    <state abbr="PR" name="Puerto Rico" rate="11.3" />
+    <state abbr="RI" name="Rhode Island" rate="5.1" />
+    <state abbr="SC" name="South Carolina" rate="6.7" />
+    <state abbr="SD" name="South Dakota" rate="3.6" />
+    <state abbr="TN" name="Tennessee" rate="5.6" />
+    <state abbr="TX" name="Texas" rate="5.4" />
+    <state abbr="UT" name="Utah" rate="4.1" />
+    <state abbr="VT" name="Vermont" rate="3.5" />
+    <state abbr="VA" name="Virginia" rate="3.5" />
+    <state abbr="WA" name="Washington" rate="5.5" />
+    <state abbr="WV" name="West Virginia" rate="4.9" />
+    <state abbr="WI" name="Wisconsin" rate="4.8" />
+    <state abbr="WY" name="Wyoming" rate="3.7" />
+  </year>
+  <year name="2006" natAvg="4.5">
+    <state abbr="AL" name="Alabama" rate="3.5" />
+    <state abbr="AK" name="Alaska" rate="6.5" />
+    <state abbr="AZ" name="Arizona" rate="4.1" />
+    <state abbr="AR" name="Arkansas" rate="5.2" />
+    <state abbr="CA" name="California" rate="4.9" />
+    <state abbr="CO" name="Colorado" rate="4.4" />
+    <state abbr="CT" name="Connecticut" rate="4.4" />
+    <state abbr="DE" name="Delaware" rate="3.5" />
+    <state abbr="DC" name="District Of Columbia" rate="5.8" />
+    <state abbr="FL" name="Florida" rate="3.4" />
+    <state abbr="GA" name="Georgia" rate="4.6" />
+    <state abbr="HI" name="Hawaii" rate="2.5" />
+    <state abbr="ID" name="Idaho" rate="3" />
+    <state abbr="IL" name="Illinois" rate="4.6" />
+    <state abbr="IN" name="Indiana" rate="5" />
+    <state abbr="IA" name="Iowa" rate="3.8" />
+    <state abbr="KS" name="Kansas" rate="4.3" />
+    <state abbr="KY" name="Kentucky" rate="5.9" />
+    <state abbr="LA" name="Louisiana" rate="3.9" />
+    <state abbr="ME" name="Maine" rate="4.6" />
+    <state abbr="MD" name="Maryland" rate="3.8" />
+    <state abbr="MA" name="Massachusetts" rate="4.8" />
+    <state abbr="MI" name="Michigan" rate="6.9" />
+    <state abbr="MN" name="Minnesota" rate="4.1" />
+    <state abbr="MS" name="Mississippi" rate="6.8" />
+    <state abbr="MO" name="Missouri" rate="4.8" />
+    <state abbr="MT" name="Montana" rate="3.3" />
+    <state abbr="NE" name="Nebraska" rate="3" />
+    <state abbr="NV" name="Nevada" rate="4.3" />
+    <state abbr="NH" name="New Hampshire" rate="3.5" />
+    <state abbr="NJ" name="New Jersey" rate="4.6" />
+    <state abbr="NM" name="New Mexico" rate="4.2" />
+    <state abbr="NY" name="New York" rate="4.6" />
+    <state abbr="NC" name="North Carolina" rate="4.8" />
+    <state abbr="ND" name="North Dakota" rate="3.2" />
+    <state abbr="OH" name="Ohio" rate="5.4" />
+    <state abbr="OK" name="Oklahoma" rate="4.1" />
+    <state abbr="OR" name="Oregon" rate="5.3" />
+    <state abbr="PA" name="Pennsylvania" rate="4.5" />
+    <state abbr="PR" name="Puerto Rico" rate="10.4" />
+    <state abbr="RI" name="Rhode Island" rate="5" />
+    <state abbr="SC" name="South Carolina" rate="6.3" />
+    <state abbr="SD" name="South Dakota" rate="3.1" />
+    <state abbr="TN" name="Tennessee" rate="5.2" />
+    <state abbr="TX" name="Texas" rate="4.9" />
+    <state abbr="UT" name="Utah" rate="3" />
+    <state abbr="VT" name="Vermont" rate="3.7" />
+    <state abbr="VA" name="Virginia" rate="3" />
+    <state abbr="WA" name="Washington" rate="4.9" />
+    <state abbr="WV" name="West Virginia" rate="4.6" />
+    <state abbr="WI" name="Wisconsin" rate="4.7" />
+    <state abbr="WY" name="Wyoming" rate="3.3" />
+  </year>
+  <year name="2007" natAvg="4.5">
+    <state abbr="AL" name="Alabama" rate="3.5" />
+    <state abbr="AK" name="Alaska" rate="6.2" />
+    <state abbr="AZ" name="Arizona" rate="3.8" />
+    <state abbr="AR" name="Arkansas" rate="5.1" />
+    <state abbr="CA" name="California" rate="5.4" />
+    <state abbr="CO" name="Colorado" rate="3.9" />
+    <state abbr="CT" name="Connecticut" rate="4.6" />
+    <state abbr="DE" name="Delaware" rate="3.4" />
+    <state abbr="DC" name="District Of Columbia" rate="5.5" />
+    <state abbr="FL" name="Florida" rate="4.1" />
+    <state abbr="GA" name="Georgia" rate="4.6" />
+    <state abbr="HI" name="Hawaii" rate="2.6" />
+    <state abbr="ID" name="Idaho" rate="3" />
+    <state abbr="IL" name="Illinois" rate="5.1" />
+    <state abbr="IN" name="Indiana" rate="4.6" />
+    <state abbr="IA" name="Iowa" rate="3.7" />
+    <state abbr="KS" name="Kansas" rate="4.1" />
+    <state abbr="KY" name="Kentucky" rate="5.5" />
+    <state abbr="LA" name="Louisiana" rate="3.8" />
+    <state abbr="ME" name="Maine" rate="4.6" />
+    <state abbr="MD" name="Maryland" rate="3.5" />
+    <state abbr="MA" name="Massachusetts" rate="4.5" />
+    <state abbr="MI" name="Michigan" rate="7.1" />
+    <state abbr="MN" name="Minnesota" rate="4.6" />
+    <state abbr="MS" name="Mississippi" rate="6.3" />
+    <state abbr="MO" name="Missouri" rate="5.1" />
+    <state abbr="MT" name="Montana" rate="3.4" />
+    <state abbr="NE" name="Nebraska" rate="2.9" />
+    <state abbr="NV" name="Nevada" rate="4.7" />
+    <state abbr="NH" name="New Hampshire" rate="3.5" />
+    <state abbr="NJ" name="New Jersey" rate="4.3" />
+    <state abbr="NM" name="New Mexico" rate="3.5" />
+    <state abbr="NY" name="New York" rate="4.5" />
+    <state abbr="NC" name="North Carolina" rate="4.7" />
+    <state abbr="ND" name="North Dakota" rate="3.1" />
+    <state abbr="OH" name="Ohio" rate="5.6" />
+    <state abbr="OK" name="Oklahoma" rate="4.1" />
+    <state abbr="OR" name="Oregon" rate="5.1" />
+    <state abbr="PA" name="Pennsylvania" rate="4.4" />
+    <state abbr="PR" name="Puerto Rico" rate="10.9" />
+    <state abbr="RI" name="Rhode Island" rate="5.2" />
+    <state abbr="SC" name="South Carolina" rate="5.6" />
+    <state abbr="SD" name="South Dakota" rate="2.9" />
+    <state abbr="TN" name="Tennessee" rate="4.8" />
+    <state abbr="TX" name="Texas" rate="4.4" />
+    <state abbr="UT" name="Utah" rate="2.7" />
+    <state abbr="VT" name="Vermont" rate="4" />
+    <state abbr="VA" name="Virginia" rate="3" />
+    <state abbr="WA" name="Washington" rate="4.5" />
+    <state abbr="WV" name="West Virginia" rate="4.3" />
+    <state abbr="WI" name="Wisconsin" rate="4.7" />
+    <state abbr="WY" name="Wyoming" rate="2.9" />
+  </year>
+  <year name="2008" natAvg="5.4">
+    <state abbr="AL" name="Alabama" rate="5" />
+    <state abbr="AK" name="Alaska" rate="6.7" />
+    <state abbr="AZ" name="Arizona" rate="5.5" />
+    <state abbr="AR" name="Arkansas" rate="5.1" />
+    <state abbr="CA" name="California" rate="7.2" />
+    <state abbr="CO" name="Colorado" rate="4.9" />
+    <state abbr="CT" name="Connecticut" rate="5.7" />
+    <state abbr="DE" name="Delaware" rate="4.8" />
+    <state abbr="DC" name="District Of Columbia" rate="7" />
+    <state abbr="FL" name="Florida" rate="6.2" />
+    <state abbr="GA" name="Georgia" rate="6.2" />
+    <state abbr="HI" name="Hawaii" rate="3.9" />
+    <state abbr="ID" name="Idaho" rate="4.9" />
+    <state abbr="IL" name="Illinois" rate="6.5" />
+    <state abbr="IN" name="Indiana" rate="5.9" />
+    <state abbr="IA" name="Iowa" rate="4.1" />
+    <state abbr="KS" name="Kansas" rate="4.4" />
+    <state abbr="KY" name="Kentucky" rate="6.4" />
+    <state abbr="LA" name="Louisiana" rate="4.6" />
+    <state abbr="ME" name="Maine" rate="5.4" />
+    <state abbr="MD" name="Maryland" rate="4.4" />
+    <state abbr="MA" name="Massachusetts" rate="5.3" />
+    <state abbr="MI" name="Michigan" rate="8.4" />
+    <state abbr="MN" name="Minnesota" rate="5.4" />
+    <state abbr="MS" name="Mississippi" rate="6.9" />
+    <state abbr="MO" name="Missouri" rate="6.1" />
+    <state abbr="MT" name="Montana" rate="4.5" />
+    <state abbr="NE" name="Nebraska" rate="3.3" />
+    <state abbr="NV" name="Nevada" rate="6.7" />
+    <state abbr="NH" name="New Hampshire" rate="3.8" />
+    <state abbr="NJ" name="New Jersey" rate="5.5" />
+    <state abbr="NM" name="New Mexico" rate="4.2" />
+    <state abbr="NY" name="New York" rate="5.4" />
+    <state abbr="NC" name="North Carolina" rate="6.3" />
+    <state abbr="ND" name="North Dakota" rate="3.2" />
+    <state abbr="OH" name="Ohio" rate="6.5" />
+    <state abbr="OK" name="Oklahoma" rate="3.8" />
+    <state abbr="OR" name="Oregon" rate="6.4" />
+    <state abbr="PA" name="Pennsylvania" rate="5.4" />
+    <state abbr="PR" name="Puerto Rico" rate="11.5" />
+    <state abbr="RI" name="Rhode Island" rate="7.8" />
+    <state abbr="SC" name="South Carolina" rate="6.9" />
+    <state abbr="SD" name="South Dakota" rate="3" />
+    <state abbr="TN" name="Tennessee" rate="6.4" />
+    <state abbr="TX" name="Texas" rate="4.9" />
+    <state abbr="UT" name="Utah" rate="3.4" />
+    <state abbr="VT" name="Vermont" rate="4.8" />
+    <state abbr="VA" name="Virginia" rate="4" />
+    <state abbr="WA" name="Washington" rate="5.3" />
+    <state abbr="WV" name="West Virginia" rate="4.3" />
+    <state abbr="WI" name="Wisconsin" rate="4.7" />
+    <state abbr="WY" name="Wyoming" rate="3.1" />
+  </year>
+  <year name="2009" natAvg="8.3">
+    <state abbr="AL" name="Alabama" rate="8.9" />
+    <state abbr="AK" name="Alaska" rate="9.3" />
+    <state abbr="AZ" name="Arizona" rate="7.4" />
+    <state abbr="AR" name="Arkansas" rate="7.3" />
+    <state abbr="CA" name="California" rate="10.9" />
+    <state abbr="CO" name="Colorado" rate="7.6" />
+    <state abbr="CT" name="Connecticut" rate="8" />
+    <state abbr="DE" name="Delaware" rate="8" />
+    <state abbr="DC" name="District Of Columbia" rate="10.1" />
+    <state abbr="FL" name="Florida" rate="9.4" />
+    <state abbr="GA" name="Georgia" rate="9.4" />
+    <state abbr="HI" name="Hawaii" rate="6.4" />
+    <state abbr="ID" name="Idaho" rate="7.8" />
+    <state abbr="IL" name="Illinois" rate="9.3" />
+    <state abbr="IN" name="Indiana" rate="10.1" />
+    <state abbr="IA" name="Iowa" rate="5.7" />
+    <state abbr="KS" name="Kansas" rate="6.2" />
+    <state abbr="KY" name="Kentucky" rate="10.2" />
+    <state abbr="LA" name="Louisiana" rate="5.5" />
+    <state abbr="ME" name="Maine" rate="9.1" />
+    <state abbr="MD" name="Maryland" rate="7.2" />
+    <state abbr="MA" name="Massachusetts" rate="8.3" />
+    <state abbr="MI" name="Michigan" rate="12.8" />
+    <state abbr="MN" name="Minnesota" rate="8.8" />
+    <state abbr="MS" name="Mississippi" rate="9.2" />
+    <state abbr="MO" name="Missouri" rate="9" />
+    <state abbr="MT" name="Montana" rate="7" />
+    <state abbr="NE" name="Nebraska" rate="4.6" />
+    <state abbr="NV" name="Nevada" rate="10.3" />
+    <state abbr="NH" name="New Hampshire" rate="5.9" />
+    <state abbr="NJ" name="New Jersey" rate="8.8" />
+    <state abbr="NM" name="New Mexico" rate="5.7" />
+    <state abbr="NY" name="New York" rate="8.4" />
+    <state abbr="NC" name="North Carolina" rate="11.3" />
+    <state abbr="ND" name="North Dakota" rate="5.2" />
+    <state abbr="OH" name="Ohio" rate="10.2" />
+    <state abbr="OK" name="Oklahoma" rate="5.9" />
+    <state abbr="OR" name="Oregon" rate="11.9" />
+    <state abbr="PA" name="Pennsylvania" rate="8.2" />
+    <state abbr="PR" name="Puerto Rico" rate="14.1" />
+    <state abbr="RI" name="Rhode Island" rate="11.4" />
+    <state abbr="SC" name="South Carolina" rate="11.5" />
+    <state abbr="SD" name="South Dakota" rate="5.1" />
+    <state abbr="TN" name="Tennessee" rate="9.5" />
+    <state abbr="TX" name="Texas" rate="6.6" />
+    <state abbr="UT" name="Utah" rate="5.5" />
+    <state abbr="VT" name="Vermont" rate="7.7" />
+    <state abbr="VA" name="Virginia" rate="7" />
+    <state abbr="WA" name="Washington" rate="9.3" />
+    <state abbr="WV" name="West Virginia" rate="7.5" />
+    <state abbr="WI" name="Wisconsin" rate="8.8" />
+    <state abbr="WY" name="Wyoming" rate="4.7" />
+  </year>
+</data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

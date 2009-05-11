@@ -3,13 +3,13 @@
  * *************************************************************************
  *
  * Copyright 2007-2009 Juice, Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -41,12 +41,19 @@ package org.juicekit.visual.renderers {
    */
   [Style(name="rectStrokeSize", type="Number", format="Length", inherit="no")]
 
-  /**
+   /**
    * Fill color used when drawing the rectangles.
+   *
+   * @default 0x333E3E
+   */
+  [Style(name="rectFillColor", type="uint", format="Color", inherit="no")]
+
+   /**
+   * Fill color used when drawing the off rectangles.
    *
    * @default 0xCCCCCC
    */
-  [Style(name="rectFillColor", type="uint", format="Color", inherit="no")]
+  [Style(name="offRectFillColor", type="uint", format="Color", inherit="no")]
 
   /**
    * Pixel spacing between the rectangles.
@@ -99,7 +106,8 @@ package org.juicekit.visual.renderers {
       CSSUtil.setDefaultsFor("FilledRectValueRenderer",
         { rectStrokeColor: defaultColor
         , rectStrokeSize: 1
-        , rectFillColor: defaultColor
+        , rectFillColor: 0x333E3E
+        , offRectFillColor: defaultColor
         , rectGap: 2
         , rectWidth: 5
         , rectHeight: 6
@@ -191,6 +199,7 @@ package org.juicekit.visual.renderers {
       const insetH:Number = unscaledHeight - insetY;
 
       const rectFillColor:uint = getStyle("rectFillColor");
+      const offRectFillColor:uint = getStyle("offRectFillColor");
       const rectWidth:Number = getStyle("rectWidth");
       const rectHeight:Number = getStyle("rectHeight");
       const rectGap:Number = getStyle("rectGap");
@@ -207,7 +216,7 @@ package org.juicekit.visual.renderers {
           g.beginFill(rectFillColor, this.alpha);
         }
         else {
-          g.beginFill(0, 0.0);
+          g.beginFill(offRectFillColor, this.alpha);
         }
         g.drawRect(x, topCoord, rectWidth, rectHeight);
         g.endFill();

@@ -39,9 +39,10 @@ package org.juicekit.util.helper {
 
 
     /**
-     * Sets the style property defaults for a custom class.
+     * Sets the style property defaults for a style selector. If the properties
+     * already exist, the default specified for that property is ignored.
      *
-     * @param className Is a string name of custom class for attaching
+     * @param selector Is a string name of the selector for attaching
      *  the following default style properties.
      *
      * @param defaults Is a simple dictionary object with keys (properties)
@@ -49,14 +50,14 @@ package org.juicekit.util.helper {
      *	style properties' respective initial values. <p>Example object literal:
      *	<code>{ strokeColor: 0xCCCCCC, fillColor: 0xCCCCCC }</code></p>
      *
-     * @return Returns the default CSSStyleDeclaration associated with
-     *	the custom className.
+     * @return Returns the <code>CSSStyleDeclaration</code> associated with
+     *	the style selector.
      */
-    public static function setDefaultsFor(className:String, defaults:Object):CSSStyleDeclaration {
+    public static function setDefaultsFor(selector:String, defaults:Object):CSSStyleDeclaration {
       var updated:Boolean = false;
       var p:*;
       var prop:String;
-      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleDeclaration(className);
+      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleDeclaration(selector);
       if (!styleDecl) {
         // If there is no CSS definition then create one
         // and set the default properties and values.
@@ -70,6 +71,7 @@ package org.juicekit.util.helper {
         // Confirm a value exists for each property or create one.
         for (prop in defaults) {
           p = styleDecl.getStyle(prop);
+          // Do not replace existing property assignments.
           if (p === undefined) {
             styleDecl.setStyle(prop, defaults[prop]);
             updated = true;
@@ -77,8 +79,44 @@ package org.juicekit.util.helper {
         }
       }
       if (updated) {
-        StyleManager.setStyleDeclaration(className, styleDecl, true);
+        StyleManager.setStyleDeclaration(selector, styleDecl, true);
       }
+      return styleDecl;
+    }
+
+
+    /**
+     * Sets the style properties for a specific style selector.
+     *
+     * @param selector Is the string name of a style selector.
+     *
+     * @param values Is a simple dictionary object with keys (properties)
+     *  matching desired style property names and values holding the
+     *  style properties' respective values. <p>Example object literal:
+     *  <code>{ strokeColor: 0xCCCCCC, fillColor: 0xCCCCCC }</code></p>
+     *
+     * @return Returns the <code>CSSStyleDeclaration</code> associated with
+     *  the style selector.
+     */
+    public static function setStyleFor(selector:String, values:Object):CSSStyleDeclaration {
+      var prop:String;
+      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleDeclaration(selector);
+      if (!styleDecl) {
+        // If there is no CSS definition then create one
+        // and set the properties and values.
+        styleDecl = new CSSStyleDeclaration();
+        for (prop in values) {
+          styleDecl.setStyle(prop, values[prop]);
+        }
+      }
+      else {
+        // Confirm a value exists for each property or create one.
+        for (prop in values) {
+          styleDecl.setStyle(prop, values[prop]);
+        }
+      }
+      // Write changes to the style manager.
+      StyleManager.setStyleDeclaration(selector, styleDecl, true);
       return styleDecl;
     }
 

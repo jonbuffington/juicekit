@@ -20,7 +20,7 @@
  */
 
 Application {
-  background-color: #000000;
+  background-gradient-colors: #111, #111;
 }
 
 .dataGridStyle {
@@ -33,9 +33,9 @@ Application {
 
 .generalLayout {
   border-style: solid;
-  backgroundColor: #F4F5F5;
+  backgroundColor: #EEE;
   color: #4D4D4D;
-  corner-radius: 10;
+  corner-radius: 7;
   horizontal-align: center;
   padding-top: 10;
   vertical-gap: 10;
@@ -60,6 +60,12 @@ Application {
   borderStyle: solid;
 }
 
+.header {
+  color: #EEE;
+  font-weight: bold;
+  font-size: 18;
+}
+
 ToolTip {
   backgroundAlpha: 0.9;
   backgroundColor: #4D4D4D;
@@ -68,6 +74,6 @@ ToolTip {
 }
 
 USMapControl {
-  font-size: 10;
+  font-size: 8;
   font-color: #4D4D4D;
 }

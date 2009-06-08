@@ -23,7 +23,6 @@
 
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
    layout="vertical"
-   width="100%" height="100%"
    xmlns:controls="org.juicekit.visual.controls.*"
    xmlns:local="*" xmlns:renderers="org.juicekit.visual.renderers.*"
    creationComplete="init()"
@@ -172,7 +171,7 @@
 
         natAvg = value.avg;
         legend.rightText = (2 * natAvg).toString() + "%"; //range of data mapped is from 0% (leftText) to twice the national average
-        labelAvg = "Nat. unemployment for year "+ key + " is "+natAvg + "%";
+        labelAvg = key + " national rate: "+natAvg + "%";
 
         var statesArray:Array = value.states.source;
         mapData = new ArrayCollection(statesArray.sortOn("rate", Array.NUMERIC)); //sort the data on rate to get the top and bottom states
@@ -269,7 +268,12 @@
       fault="loadFailed(event)"
    />
 
-  <mx:HBox width="1100" height="600" horizontalGap="50">
+  <mx:HBox width="959" height="29.242401" horizontalGap="50" styleName="header">
+    <mx:Label text="Unemployment Rates for 1999 - 2009" fontWeight="bold" fontSize="18" textAlign="left"/>
+  	
+  </mx:HBox>
+
+  <mx:HBox width="963" height="555.98486" horizontalGap="50">
 
     <mx:VBox width="650" height="550" styleName="generalLayout">
       <mx:HSlider id="yearSlider"
@@ -283,6 +287,7 @@
         dataTipFormatFunction="dataTipFormatter"
         liveDragging="true"
       />
+      <mx:Label text="Year" fontWeight="bold"/>
 
      <controls:USMapControl id="map"
        stateAbbrField="abbr"
@@ -292,18 +297,24 @@
        width="600" height="400"
       />
      <renderers:HLabeledGradient3 id="legend" width="50%"/>
-     <mx:Label text="{'Unemployment Rate: '+natAvg + '%'}"/>
+     <mx:Label text="{'National Unemployment Rate: '+natAvg + '%'}"/>
     </mx:VBox>
 
-    <mx:VBox width="360" height="550" styleName="generalLayout">
+    <mx:VBox width="261" height="550" styleName="generalLayout">
      <mx:Label id="lblDG" text="{labelAvg}" fontSize="14" fontWeight="bold"/>
      <mx:HBox styleName="dGLabels" width="100%">
-       <mx:Label text="Top five states."/>
+       <mx:Label text="States with lowest unemployment" fontWeight="bold" fontStyle="normal"/>
+     </mx:HBox>
+     <mx:HBox width="100%" borderStyle="none">
+      <mx:Spacer width="3" height="17"/>
+      <mx:Label text="State" fontWeight="bold"/>
+      <mx:Spacer width="106" height="17"/>
+      <mx:Label text="Index" fontWeight="bold"/>
      </mx:HBox>
      <mx:DataGrid id="topDG"
-      height="200" width="250"
+      height="169" width="250"
       rowHeight="30"
-      fontSize="10"
+      fontSize="15"
       styleName="dataGridStyle"
       showHeaders="false"
       resizableColumns="false"
@@ -317,12 +328,18 @@
       </mx:columns>
      </mx:DataGrid>
      <mx:HBox styleName="dGLabels" width="100%">
-      <mx:Label text="Bottom five states." fontSize="12" fontWeight="bold"/>
+      <mx:Label text="States with highest unemployment" fontSize="12" fontWeight="bold"/>
+     </mx:HBox>
+     <mx:HBox width="100%" borderStyle="none">
+      <mx:Spacer width="3" height="17"/>
+      <mx:Label text="State" fontWeight="bold"/>
+      <mx:Spacer width="106" height="17"/>
+      <mx:Label text="Index" fontWeight="bold"/>
      </mx:HBox>
     <mx:DataGrid id="bottomDG"
-      height="50%" width="250"
+      height="170" width="250"
       rowHeight="30"
-      fontSize="10"
+      fontSize="15"
       styleName="dataGridStyle"
       showHeaders="false"
       resizableColumns="false"

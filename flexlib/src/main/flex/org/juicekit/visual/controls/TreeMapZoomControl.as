@@ -191,11 +191,6 @@ package org.juicekit.visual.controls {
       _tree.removeEventListener(TransitionEvent.END, onEndTransition);
       _tree.transitionPeriod = NaN;
       _tree.minLabelDepth = _tree.maxLabelDepth = _tree.dataRoot.depth + 1;
-
-      // Force flare to render everything.
-      callLater(function ():void {
-        DirtySprite.renderDirty();
-      });
     }
 
 

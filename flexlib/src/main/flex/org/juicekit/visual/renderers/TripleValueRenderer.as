@@ -69,7 +69,7 @@ package org.juicekit.visual.renderers {
     classConstructor();
 
     private static function classConstructor():void {
-      CSSUtil.setDefaultsFor("TripleValueRenderer",
+      CSSUtil.setDefaultsFor("org.juicekit.visual.renderers.TripleValueRenderer",
         { labelWidth: 20
         , labelGap:4
         , ruleColor:0x000000

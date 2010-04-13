@@ -103,7 +103,7 @@ package org.juicekit.visual.renderers {
 
     private static function classConstructor():void {
       const defaultColor:uint = 0xCCCCCC;
-      CSSUtil.setDefaultsFor("FilledRectValueRenderer",
+      CSSUtil.setDefaultsFor("org.juicekit.visual.renderers.FilledRectValueRenderer",
         { rectStrokeColor: defaultColor
         , rectStrokeSize: 1
         , rectFillColor: 0x333E3E

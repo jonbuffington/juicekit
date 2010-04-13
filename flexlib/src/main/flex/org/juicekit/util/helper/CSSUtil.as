@@ -25,6 +25,7 @@ package org.juicekit.util.helper {
   import flash.text.FontStyle;
   import flash.text.TextFormat;
 
+  import mx.core.IFlexModuleFactory;
   import mx.styles.CSSStyleDeclaration;
   import mx.styles.StyleManager;
 
@@ -50,14 +51,17 @@ package org.juicekit.util.helper {
      *	style properties' respective initial values. <p>Example object literal:
      *	<code>{ strokeColor: 0xCCCCCC, fillColor: 0xCCCCCC }</code></p>
      *
+     * @param moduleFactory Is the module factory of an object for a given
+     *  style manager. If null, the top-level style manager is returned.
+     *
      * @return Returns the <code>CSSStyleDeclaration</code> associated with
      *	the style selector.
      */
-    public static function setDefaultsFor(selector:String, defaults:Object):CSSStyleDeclaration {
+    public static function setDefaultsFor(selector:String, defaults:Object, moduleFactory:IFlexModuleFactory = null):CSSStyleDeclaration {
       var updated:Boolean = false;
       var p:*;
       var prop:String;
-      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleDeclaration(selector);
+      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleManager(moduleFactory).getStyleDeclaration(selector);
       if (!styleDecl) {
         // If there is no CSS definition then create one
         // and set the default properties and values.
@@ -79,7 +83,7 @@ package org.juicekit.util.helper {
         }
       }
       if (updated) {
-        StyleManager.setStyleDeclaration(selector, styleDecl, true);
+        StyleManager.getStyleManager(moduleFactory).setStyleDeclaration(selector, styleDecl, true);
       }
       return styleDecl;
     }
@@ -95,12 +99,15 @@ package org.juicekit.util.helper {
      *  style properties' respective values. <p>Example object literal:
      *  <code>{ strokeColor: 0xCCCCCC, fillColor: 0xCCCCCC }</code></p>
      *
+     * @param moduleFactory Is the module factory of an object for a given
+     *  style manager. If null, the top-level style manager is returned.
+     *
      * @return Returns the <code>CSSStyleDeclaration</code> associated with
      *  the style selector.
      */
-    public static function setStyleFor(selector:String, values:Object):CSSStyleDeclaration {
+    public static function setStyleFor(selector:String, values:Object, moduleFactory:IFlexModuleFactory = null):CSSStyleDeclaration {
       var prop:String;
-      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleDeclaration(selector);
+      var styleDecl:CSSStyleDeclaration = StyleManager.getStyleManager(moduleFactory).getStyleDeclaration(selector);
       if (!styleDecl) {
         // If there is no CSS definition then create one
         // and set the properties and values.
@@ -116,7 +123,7 @@ package org.juicekit.util.helper {
         }
       }
       // Write changes to the style manager.
-      StyleManager.setStyleDeclaration(selector, styleDecl, true);
+      StyleManager.getStyleManager(moduleFactory).setStyleDeclaration(selector, styleDecl, true);
       return styleDecl;
     }
 

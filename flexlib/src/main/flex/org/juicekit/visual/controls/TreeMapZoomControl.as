@@ -304,7 +304,7 @@ package org.juicekit.visual.controls {
     /*
      * This function returns the depth (number of LinkButtons) of this control.
      */
-    public function get depth():uint{
+    public function get zoomDepth():uint{
       return buttons.length;
     }
   }

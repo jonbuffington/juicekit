@@ -4,7 +4,7 @@
   <groupId>org.juicekit</groupId>
   <artifactId>juicekit</artifactId>
   <packaging>pom</packaging>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.3.0-20100413</version>
   <name>JuiceKit for Visual Analytics</name>
   <url>http://www.juicekit.org/</url>
   <inceptionYear>2007</inceptionYear>
@@ -33,9 +33,8 @@
   </modules>
 
   <properties>
-    <flexmojos.version>3.2.0</flexmojos.version>
-    <flex.sdk.version>3.2.0.3958</flex.sdk.version>
-    <currentVersion>${project.version}</currentVersion>
+    <flexmojos.version>3.6.1</flexmojos.version>
+    <flex.sdk.version>4.0.0.14159</flex.sdk.version>
   </properties>
 
   <build>
@@ -123,19 +122,19 @@
       </dependency>
       <!-- Adobe's open source Flex SDK -->
       <dependency>
-        <groupId>com.adobe.flex.framework</groupId>
-        <artifactId>flex-framework</artifactId>
-        <version>${flex.sdk.version}</version>
-        <type>pom</type>
+	      <groupId>com.adobe.flex.framework</groupId>
+	      <artifactId>flex-framework</artifactId>
+	      <version>${flex.sdk.version}</version>
+	      <type>pom</type>
       </dependency>
-      <!-- flexmojos unit testing support -->
-      <dependency>
-        <groupId>org.sonatype.flexmojos</groupId>
-        <artifactId>flexmojos-unittest-support</artifactId>
-        <version>${flexmojos.version}</version>
-        <type>swc</type>
-        <scope>test</scope>
-      </dependency>
+	    <!-- Include unit test dependencies. -->
+	    <dependency>
+	      <groupId>com.adobe.flexunit</groupId>
+	      <artifactId>flexunit</artifactId>
+	      <version>4.0-rc-1</version>
+	      <type>swc</type>
+	      <scope>test</scope>
+	    </dependency>
     </dependencies>
   </dependencyManagement>
 

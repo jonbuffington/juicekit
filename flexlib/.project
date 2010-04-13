@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>flexlib_juicekit</name>
-	<comment></comment>
+	<name>flexlib</name>
+	<comment/>
 	<projects>
 		<project>flare</project>
 	</projects>
@@ -17,3 +17,4 @@
 		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 	</natures>
 </projectDescription>
+

@@ -82,7 +82,7 @@ package org.juicekit.visual.renderers {
     classConstructor();
 
     private static function classConstructor():void {
-      CSSUtil.setDefaultsFor("HBarRenderer",
+      CSSUtil.setDefaultsFor("org.juicekit.visual.renderers.HBarRenderer",
         { color: 0x000000
         , backgroundColor: NaN
         , fontColor: 0x000000

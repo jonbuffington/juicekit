@@ -138,7 +138,7 @@ package org.juicekit.visual.controls {
     classConstructor();
 
     private static function classConstructor():void {
-      CSSUtil.setDefaultsFor("TreeMapControl",
+      CSSUtil.setDefaultsFor("org.juicekit.visual.controls.TreeMapControl",
         { fontColor: 0x000000
         , textPosition: "top"
         , strokeAlphas: [1.0]

@@ -19,9 +19,9 @@
  * *************************************************************************
  */
 
-Application {
-  background-gradient-colors: #111, #111;
-}
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace s  "library://ns.adobe.com/flex/spark";
+@namespace jk "org.juicekit.visual.controls.*";
 
 .dataGridStyle {
   borderStyle: none;
@@ -66,14 +66,14 @@ Application {
   font-size: 18;
 }
 
-ToolTip {
+mx|ToolTip {
   backgroundAlpha: 0.9;
   backgroundColor: #4D4D4D;
   color: #CCC;
   corner-radius: 4;
 }
 
-USMapControl {
+jk|USMapControl {
   font-size: 8;
   font-color: #4D4D4D;
 }

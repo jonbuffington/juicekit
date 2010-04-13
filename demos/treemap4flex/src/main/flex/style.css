@@ -19,15 +19,17 @@
  * *************************************************************************
  */
 
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace s  "library://ns.adobe.com/flex/spark";
+@namespace jk "org.juicekit.visual.controls.*";
 
-Application {
-  background-gradient-colors: #111, #111;
+mx|Application {
   font-family: Verdana;
   font-size: 12;
   horizontal-align: left;
 }
 
-TreeMapControl {
+jk|TreeMapControl {
   font-color: #4C4C4C;
   font-weight: bold;
   highlight-colors: #EEE, #EEE;
@@ -40,7 +42,7 @@ TreeMapControl {
   text-position: middle;
 }
 
-TreeMapZoomControl {
+jk|TreeMapZoomControl {
   color: #4C4C4C;
 }
 

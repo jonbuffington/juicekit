@@ -53,7 +53,7 @@ package org.juicekit.visual.renderers {
     classConstructor();
 
     private static function classConstructor():void {
-      CSSUtil.setDefaultsFor("IndexCircleRenderer",
+      CSSUtil.setDefaultsFor("org.juicekit.visual.renderers.IndexCircleRenderer",
         { color: 0x000000
         , paddingLeft: 0
         , paddingRight: 0

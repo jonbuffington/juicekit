@@ -15,7 +15,7 @@ After cloning JuiceKit from github you need to do a submodule update to pull in 
 
   $ git submodule update -i
 
-To build the the library from source, issue the following Maven2 command:
+To build the library from source, issue the following Maven2 command:
 
   $ MAVEN_OPTS="-Xms64m -Xmx256m" mvn clean install site
 
